@@ -9,7 +9,7 @@ get:
     200:
       description: Payment forcast found.
       schema:
-        $ref: 'http://localhost:8000/upc/definitions/Forcast'
+        $ref: 'http://localhost:8000/upc/definitions/forcast.yaml'
     500:
       description: Could not retrieve payment forcast
       schema:
@@ -20,4 +20,4 @@ get:
     default:
       description: Unexpected error.
       schema:
-        $ref: 'http://localhost:8000/upc/definitions/Error'
+        $ref: 'http://localhost:8000/upc/definitions/error.yaml'

@@ -9,13 +9,13 @@ get:
     200:
       description: Session created.
       schema:
-        $ref: 'http://localhost:8000/upc/definitions/Payment'
+        $ref: 'http://localhost:8000/upc/definitions/payment.yaml'
     404:
       description: User does not have a subscription
     default:
       description: Unexpected error.
       schema:
-        $ref: 'http://localhost:8000/upc/definitions/Error'
+        $ref: 'http://localhost:8000/upc/definitions/error.yaml'
 put:
   summary: Add payment method
   description: |
@@ -33,4 +33,4 @@ put:
     default:
       description: Unexpected error.
       schema:
-        $ref: 'http://localhost:8000/upc/definitions/Error'
+        $ref: 'http://localhost:8000/upc/definitions/error.yaml'

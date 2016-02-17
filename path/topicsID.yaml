@@ -28,7 +28,7 @@ patch:
     default:
       description: Unexpected error.
       schema:
-        $ref: 'http://localhost:8000/upc/definitions/Error'
+        $ref: 'http://localhost:8000/upc/definitions/error.yaml'
 delete:
   summary: Delete topic
   description: |
@@ -52,7 +52,7 @@ delete:
     default:
       description: Unexpected error
       schema:
-        $ref: 'http://localhost:8000/upc/definitions/Error'
+        $ref: 'http://localhost:8000/upc/definitions/error.yaml'
 get:
   summary: Get a topic
   description: |
@@ -75,7 +75,7 @@ get:
           topic:
             type: object
             items:
-              $ref: 'http://localhost:8000/upc/definitions/Topic'
+              $ref: 'http://localhost:8000/upc/definitions/topic.yaml'
     400:
       description: Improperly formatted request.
     404:
@@ -83,4 +83,4 @@ get:
     default:
       description: Unexpected error.
       schema:
-        $ref: 'http://localhost:8000/upc/definitions/Error'
+        $ref: 'http://localhost:8000/upc/definitions/error.yaml'

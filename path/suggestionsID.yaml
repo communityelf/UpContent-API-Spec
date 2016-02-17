@@ -14,11 +14,11 @@ get:
     200:
       description: Suggestion found.
       schema:
-        $ref: 'http://localhost:8000/upc/definitions/Suggestion'
+        $ref: 'http://localhost:8000/upc/definitions/suggestion.yaml'
     default:
       description: Unexpected error.
       schema:
-        $ref: 'http://localhost:8000/upc/definitions/Error'
+        $ref: 'http://localhost:8000/upc/definitions/error.yaml'
 patch:
   summary: Update suggestion.
   description: |
@@ -39,7 +39,7 @@ patch:
     default:
       description: Unexpected error.
       schema:
-        $ref: 'http://localhost:8000/upc/definitions/Error'
+        $ref: 'http://localhost:8000/upc/definitions/error.yaml'
 put:
   summary: Update suggestion.
   description: |
@@ -60,7 +60,7 @@ put:
     default:
       description: Unexpected error.
       schema:
-        $ref: 'http://localhost:8000/upc/definitions/Error'
+        $ref: 'http://localhost:8000/upc/definitions/error.yaml'
 delete:
   summary: Delete suggestion.
   description: |
@@ -81,4 +81,4 @@ delete:
     default:
       description: Unexpected error.
       schema:
-        $ref: 'http://localhost:8000/upc/definitions/Error'
+        $ref: 'http://localhost:8000/upc/definitions/error.yaml'

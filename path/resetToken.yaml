@@ -30,4 +30,4 @@ post:
     default:
       description: Unexpected error.
       schema:
-        $ref: 'http://localhost:8000/upc/definitions/Error'
+        $ref: 'http://localhost:8000/upc/definitions/error.yaml'

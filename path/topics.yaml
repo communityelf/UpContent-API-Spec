@@ -10,11 +10,11 @@ get:
       schema:
         type: array
         items:
-          $ref: 'http://localhost:8000/upc/definitions/Topic'
+          $ref: 'http://localhost:8000/upc/definitions/topic.yaml'
     default:
       description: Unexpected error.
       schema:
-        $ref: 'http://localhost:8000/upc/definitions/Error'
+        $ref: 'http://localhost:8000/upc/definitions/error.yaml'
 post:
   summary: Create topic
   description: |
@@ -33,4 +33,4 @@ post:
     default:
       description: Unexpected error.
       schema:
-        $ref: 'http://localhost:8000/upc/definitions/Error'
+        $ref: 'http://localhost:8000/upc/definitions/error.yaml'

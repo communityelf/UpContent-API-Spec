@@ -22,7 +22,7 @@ get:
           suggestions:
             type: array
             items:
-              $ref: 'http://localhost:8000/upc/definitions/Suggestion'
+              $ref: 'http://localhost:8000/upc/definitions/suggestion.yaml'
     400:
       description: Improperly formatted request.
     404:
@@ -30,4 +30,4 @@ get:
     default:
       description: Unexpected error.
       schema:
-        $ref: 'http://localhost:8000/upc/definitions/Error'
+        $ref: 'http://localhost:8000/upc/definitions/error.yaml'
