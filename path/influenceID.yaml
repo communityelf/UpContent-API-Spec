@@ -54,7 +54,7 @@ get:
                   type: string
                   description: --Needs work--
     404:
-      description: Topic id not found.
+      description: Topic ID not found.
     default:
       description: Unexpected error.
       schema:

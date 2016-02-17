@@ -1,18 +1,18 @@
 get:
   summary: List Topics
   description: |
-    Retrieves a list of all of the authenticated user's topics.
+    Retrieves a list of all of the authenticated user's topics
   tags:
     - Topics
   responses:
     200:
-      description: An array of topics.
+      description: An array of topics
       schema:
         type: array
         items:
           $ref: 'http://localhost:8000/upc/definitions/topic.yaml'
     default:
-      description: Unexpected error.
+      description: Unexpected error
       schema:
         $ref: 'http://localhost:8000/upc/definitions/error.yaml'
 post:
@@ -23,14 +23,14 @@ post:
     - Topics
   responses:
     200:
-      description: Created topic succesfully.
+      description: Created topic succesfully
       schema:
         type: object
         properties:
           topic:
             type: string
-            description: An identifier for the topic.
+            description: A unique identifier for the topic
     default:
-      description: Unexpected error.
+      description: Unexpected error
       schema:
         $ref: 'http://localhost:8000/upc/definitions/error.yaml'

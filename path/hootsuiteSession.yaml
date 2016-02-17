@@ -38,7 +38,7 @@ post:
             description: --Needs work--
 
     401:
-      description: Invalid hootsuite token
+      description: InvalID hootsuite token
     default:
       description: Unexpected error.
       schema:

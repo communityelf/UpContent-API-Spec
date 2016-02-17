@@ -1,19 +1,18 @@
 put:
   summary: Get user info --NEEDS WORK--
   description: |
-    Get a specific user or if user_id = "me" get current user
+    Get a specific user uuID or if user_ID = "me" get current user
   tags:
     - User
   parameters:
     - name: user_id
       in: path
-      description: Identifier for a user.
+      description: Identifier for user
       required: true
       type: string
-      format: uuid
   responses:
     200:
-      description: User found.
+      description: User found
       schema:
         type: object
         properties:
@@ -23,7 +22,7 @@ put:
               id:
                 type: string
                 format: uuid
-                description: A unique identifier for a user.
+                description: A unique identifier for a user
               email:
                 type: string
                 format: email
@@ -32,10 +31,10 @@ put:
                 type: string
                 description: Users name
     400:
-      description: Type error.
+      description: Type error
     404:
-      description: User not found.
+      description: User not found
     default:
-      description: Unexpected error.
+      description: Unexpected error
       schema:
         $ref: 'http://localhost:8000/upc/definitions/error.yaml'

@@ -6,14 +6,14 @@ get:
     - User
   responses:
     200:
-      description: User connected.
+      description: User connected
       schema:
         type: object
         properties:
           user-count:
             type: string
-            description: A unique identifier for a user.
+            description: Unique identifier for a user
     default:
-      description: Unexpected error.
+      description: Unexpected error
       schema:
         $ref: 'http://localhost:8000/upc/definitions/error.yaml'

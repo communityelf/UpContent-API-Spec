@@ -1,8 +1,8 @@
 /users:
   post:
-    summary: Create User
+    summary: Create user
     description: |
-      Creates a new user when given a name, email, and password
+      Creates a new user when given a name, email, and password.
     tags:
       - User
     parameters:
@@ -18,33 +18,33 @@
             email:
               type: string
               format: email
-              description: Users email address.
+              description: Users email address
             password:
               type: string
               format: password
               description: Users password
     responses:
       200:
-        description: User succesfully created.
+        description: User succesfully created
         schema:
           type: object
           properties:
             user_id:
               type: string
               format: uuid
-              description: An identifier for the new user.
+              description: An identifier for the new user
       400:
-        description: Missing a required field.
+        description: Missing a required field
       409:
-        description: Email taken.
+        description: Email taken
         schema:
           type: object
           properties:
             email:
-              description: Error response given when creating new user.
+              description: Error response given when creating new user
               type: string
               format: email
       default:
-        description: Unexpected error.
+        description: Unexpected error
         schema:
           $ref: 'http://localhost:8000/upc/definitions/error.yaml'

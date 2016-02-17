@@ -1,74 +1,74 @@
 patch:
   summary: Update topic
   description: |
-    Updates a specific topic using the topic id parameter
+    Updates a specific topic using the topic ID provided
   tags:
     - Topics
   parameters:
     - name: id
       in: path
-      description: An identifier for the topic to be deleted.
+      description: Unique identifier for the topic to be deleted
       required: true
       type: string
       format: uuid
   responses:
     200:
-      description: Updated topic succesfully.
+      description: Updated topic succesfully
       schema:
         type: object
         properties:
           topic:
             type: string
             format: uuid
-            description: An identifier for the topic.
+            description: Unique identifier for updated topic
     400:
-      description: Improperly formatted request.
+      description: Improperly formatted request
     404:
-      description: Topic id does not exist, or is owned by another user.
+      description: Topic ID does not exist, or is owned by another user
     default:
-      description: Unexpected error.
+      description: Unexpected error
       schema:
         $ref: 'http://localhost:8000/upc/definitions/error.yaml'
 delete:
   summary: Delete topic
   description: |
-    Deletes a specific topic using the topic id provided
+    Deletes a specific topic using the topic ID provided
   tags:
     - Topics
   parameters:
     - name: id
       in: path
-      description: An identifier for the topic.
+      description: Unique identifier for the topic
       required: true
       type: string
       format: uuid
   responses:
     200:
-      description: Deleted topic succesfully.
+      description: Deleted topic succesfully
     400:
-      description: Improperly formatted request.
+      description: Improperly formatted request
     404:
-      description: Topic id does not exist, or is owned by another user.
+      description: Topic ID does not exist, or is owned by another user
     default:
       description: Unexpected error
       schema:
         $ref: 'http://localhost:8000/upc/definitions/error.yaml'
 get:
-  summary: Get a topic
+  summary: Get topic
   description: |
-    Returns a specific topic using the topic id provided
+    Returns a specific topic using the topic ID provided
   tags:
     - Topics
   parameters:
     - name: id
       in: path
-      description: ID of topic to retrieve.
+      description: Unique identifier of topic to retrieve
       required: true
       type: string
       format: uuid
   responses:
     200:
-      description: Topic found.
+      description: Topic found
       schema:
         type: object
         properties:
@@ -77,10 +77,10 @@ get:
             items:
               $ref: 'http://localhost:8000/upc/definitions/topic.yaml'
     400:
-      description: Improperly formatted request.
+      description: Improperly formatted request
     404:
-      description: Topic id does not exist, or is owned by another user.
+      description: Topic ID does not exist, or is owned by another user
     default:
-      description: Unexpected error.
+      description: Unexpected error
       schema:
         $ref: 'http://localhost:8000/upc/definitions/error.yaml'

@@ -1,7 +1,7 @@
 put:
   summary: Edit user
   description: |
-    Change users name, email, or password
+    Change users name, email, or password.
   tags:
     - User
   parameters:
@@ -22,14 +22,14 @@ put:
           email:
             type: string
             format: email
-            description: Users email address.
+            description: Users email address
           password:
             type: string
             format: password
             description: Users password
   responses:
     200:
-      description: User succesfully edited.
+      description: User succesfully edited
     400:
       description: Type error
       schema:
@@ -37,32 +37,32 @@ put:
         properties:
           message:
             type: string
-            description: Description of error.
+            description: Description of error
     403:
-      description: Authorization error.
+      description: Authorization error
       schema:
         type: object
         properties:
           message:
             type: string
-            description: Description of error.
+            description: Description of error
     409:
-      description: Conflict error.
+      description: Conflict error
       schema:
         type: object
         properties:
           message:
             type: string
-            description: Description of error.
+            description: Description of error
     500:
-      description: Base error.
+      description: Base error
       schema:
         type: object
         properties:
           message:
             type: string
-            description: Description of error.
+            description: Description of error
     default:
-      description: Unexpected error.
+      description: Unexpected error
       schema:
         $ref: 'http://localhost:8000/upc/definitions/error.yaml'

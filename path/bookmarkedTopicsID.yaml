@@ -24,7 +24,7 @@ put:
                 format: uuid
                 description: Identifier for new bookmark
     400:
-      description: Not a valid topic id.
+      description: Not a valID topic id.
       schema:
         type: object
         properties:

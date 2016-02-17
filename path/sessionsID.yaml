@@ -16,7 +16,7 @@ get:
       schema:
        $ref: 'http://localhost:8000/upc/definitions/userSession.yaml'
     401:
-      description: Invalid session id
+      description: InvalID session id
       schema:
         type: object
         properties:
