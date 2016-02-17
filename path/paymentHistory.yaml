@@ -1,0 +1,23 @@
+get:
+  summary: Get payment method
+  description: |
+    Get payment method
+  tags:
+    - User
+    - Subscription
+  responses:
+    200:
+      description: Payment history found.
+      schema:
+        $ref: '#/definitions/History'
+    500:
+      description: User does not have a subscription
+      schema:
+        type: object
+        properties:
+          message:
+            type: string
+    default:
+      description: Unexpected error.
+      schema:
+        $ref: '#/definitions/Error'

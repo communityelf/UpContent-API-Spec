@@ -1,0 +1,18 @@
+put:
+  summary: Confirm email
+  description: Confirms email.
+  tags:
+    - User
+  parameters:
+    - name: email_token
+      in: path
+      required: true
+      type: string
+      format: uuid
+  responses:
+    200:
+      description: User confirmed.
+    default:
+      description: Unexpected error.
+      schema:
+        $ref: '#/definitions/Error'

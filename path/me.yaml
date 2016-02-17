@@ -1,0 +1,55 @@
+get:
+  summary: Get user profile
+  description: |
+    Returns basic user information
+  tags:
+    - User
+  responses:
+    200:
+      description: User found.
+      schema:
+        $ref: '#/definitions/User'
+    default:
+      description: Unexpected error.
+      schema:
+        $ref: '#/definitions/Error'
+
+put:
+  summary: Update user profile
+  description: |
+    Updates basic user information
+  tags:
+    - User
+  responses:
+    200:
+      description: User updated.
+    400:
+      description: Type error.
+    403:
+      description: Authorization error.
+      schema:
+        type: object
+        properties:
+          message:
+            type: string
+            description: Description of error.
+    409:
+      description: Conflict error.
+      schema:
+        type: object
+        properties:
+          message:
+            type: string
+            description: Description of error.
+    500:
+      description: Base error.
+      schema:
+        type: object
+        properties:
+          message:
+            type: string
+            description: Description of error.
+    default:
+      description: Unexpected error.
+      schema:
+        $ref: '#/definitions/Error'

@@ -1,0 +1,33 @@
+get:
+  summary: Get suggestions for topic
+  description: |
+    Returns a list of suggestions for a specfic topic
+    using the topic id provided
+  tags:
+    - Topics
+      Suggestions
+  parameters:
+    - name: id
+      in: path
+      description: An identifier for a topic.
+      required: true
+      type: string
+      format: uuid
+  responses:
+    200:
+      description: Returns all suggestions.
+      schema:
+        type: object
+        properties:
+          suggestions:
+            type: array
+            items:
+              $ref: '#/definitions/Suggestion'
+    400:
+      description: Improperly formatted request.
+    404:
+      description: Topic id does not exist, or is owned by another user.
+    default:
+      description: Unexpected error.
+      schema:
+        $ref: '#/definitions/Error'

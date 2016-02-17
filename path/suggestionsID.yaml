@@ -1,0 +1,84 @@
+get:
+  summary: Get a suggestion
+  description: |
+    Retrieves specified suggesiton
+  tags:
+    - Suggestions
+  parameters:
+    - name: suggestion_id
+      in: path
+      required: true
+      type: string
+      format: uuid
+  responses:
+    200:
+      description: Suggestion found.
+      schema:
+        $ref: '#/definitions/Suggestion'
+    default:
+      description: Unexpected error.
+      schema:
+        $ref: '#/definitions/Error'
+patch:
+  summary: Update suggestion.
+  description: |
+    Updates specified suggestion
+  tags:
+    - Suggestions
+  parameters:
+    - name: suggestion_id
+      in: path
+      required: true
+      type: string
+      format: uuid
+  responses:
+    200:
+      description: Suggestion updated.
+    404:
+      description: Suggestion does not exist or user doesn't have permission to change suggestion.
+    default:
+      description: Unexpected error.
+      schema:
+        $ref: '#/definitions/Error'
+put:
+  summary: Update suggestion.
+  description: |
+    Updates specified suggestion
+  tags:
+    - Suggestions
+  parameters:
+    - name: suggestion_id
+      in: path
+      required: true
+      type: string
+      format: uuid
+  responses:
+    200:
+      description: Suggestion updated.
+    404:
+      description: Suggestion does not exist or user doesn't have permission to change suggestion.
+    default:
+      description: Unexpected error.
+      schema:
+        $ref: '#/definitions/Error'
+delete:
+  summary: Delete suggestion.
+  description: |
+    Delete specified suggestion
+  tags:
+    - Suggestions
+  parameters:
+    - name: suggestion_id
+      in: path
+      required: true
+      type: string
+      format: uuid
+  responses:
+    200:
+      description: Suggestion deleted.
+    403:
+      description: Suggestion does not exist or user doesn't have permission to change suggestion.
+    default:
+      description: Unexpected error.
+      schema:
+        $ref: '#/definitions/Error'

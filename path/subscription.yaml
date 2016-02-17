@@ -1,0 +1,63 @@
+/subscription:
+  put:
+    summary: Create subscription
+    description: |
+      Create subscription
+    tags:
+      - User
+    parameters:
+      - name: data
+        in: body
+        required: true
+        schema:
+          type: object
+          properties:
+            plan:
+              type: string
+    responses:
+      200:
+        description: Subscription created.
+      400:
+        description: Error create subscription.
+        schema:
+          type: object
+          properties:
+            error:
+              type: string
+      default:
+        description: Unexpected error.
+        schema:
+          $ref: '#/definitions/Error'
+  delete:
+    summary: Delete subscription.
+    description: |
+      Delete subscription
+    tags:
+      - User
+    responses:
+      200:
+        description: Subscription deleted.
+      default:
+        description: Unexpected error.
+        schema:
+          $ref: '#/definitions/Error'
+  get:
+    summary: Get subscription.
+    description: |
+      Create subscription.
+    tags:
+      - User
+    responses:
+      200:
+        description: Subscription created.
+        schema:
+          type: object
+          properties:
+            subscription:
+              type: string
+      404:
+        description: Could not find subscription.
+      default:
+        description: Unexpected error.
+        schema:
+          $ref: '#/definitions/Error'

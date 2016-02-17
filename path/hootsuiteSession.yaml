@@ -1,0 +1,45 @@
+post:
+  summary: Create hootsuite session
+  description: |
+    Create hootsuite session
+  tags:
+    - User
+  parameters:
+    - name: data
+      in: body
+      required: true
+      schema:
+        type: object
+        properties:
+          i:
+            type: string
+          ts:
+            type: string
+          hash:
+            type: string
+  responses:
+    200:
+      description: Session created.
+      schema:
+       $ref: '#/definitions/User-Session'
+    400:
+      description: Missing field.
+      schema:
+        type: object
+        properties:
+          i:
+            type: string
+            description: --Needs work--
+          ts:
+            type: string
+            description: --Needs work--
+          hash:
+            type: string
+            description: --Needs work--
+
+    401:
+      description: Invalid hootsuite token
+    default:
+      description: Unexpected error.
+      schema:
+        $ref: '#/definitions/Error'

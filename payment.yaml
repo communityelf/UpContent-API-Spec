@@ -1,0 +1,48 @@
+type: object
+properties:
+  name:
+    type: string
+    description: |
+      Name on payment option
+  brand:
+    type: string
+    description: |
+      Type of payment option
+  exp_month:
+    type: string
+    format: dataTime
+    description: |
+      Payment option expiration month
+  exp_year:
+    type: string
+    format: dataTime
+    description: |
+      Payment option expiration year
+  cardnumber:
+    type: integer
+    description: |
+      Payment option number --NEEDs WORK--
+  address:
+    type: string
+    description: |
+      Payment option street address
+  address2:
+    type: string
+    description: |
+      Payment option street address line 2 --NEEDS WORK--
+  city:
+    type: string
+    description: |
+      Payment option city
+  state:
+    type: string
+    description: |
+      Payment option state
+  zip:
+    type: string
+    description: |
+      Payment option zip --NEEDS WORK--
+  cvv:
+    type: integer
+    description: |
+      Payment option cvv

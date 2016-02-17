@@ -1,0 +1,23 @@
+get:
+  summary: Get payment forcast
+  description: |
+    Get payment forcast
+  tags:
+    - User
+    - Subscription
+  responses:
+    200:
+      description: Payment forcast found.
+      schema:
+        $ref: '#/definitions/Forcast'
+    500:
+      description: Could not retrieve payment forcast
+      schema:
+        type: object
+        properties:
+          message:
+            type: string
+    default:
+      description: Unexpected error.
+      schema:
+        $ref: '#/definitions/Error'

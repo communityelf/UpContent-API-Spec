@@ -1,0 +1,92 @@
+/infomous-graph:
+  $ref: './infomous.yaml'
+
+/diagnostics/heartbeat:
+  $ref: './diagnostics.yaml'
+
+/payment-forcast:
+  $ref: './paymentForcast.yaml'
+
+/payment-history:
+  $ref: './paymentHistory.yaml'
+
+/payment-method:
+  $ref: './paymentMethod.yaml'
+
+/hootsuite.sessions:
+  $ref: './hootsuiteSession.yaml'
+
+/sessions:
+  $ref: './sessions.yaml'
+
+/sessions/{session_id}:
+  $ref: './sessionsID.yaml'
+
+/states/{p_id}:
+  $ref: './states.yaml'
+
+/subscription:
+  $ref: './subscription.yaml'
+
+/suggestions/{suggestion_id}:
+  $ref: './suggestionsID.yaml'
+
+/influence-graph/{topic_id}:
+  $ref: './influenceID.yaml'
+
+/reset-token:
+  $ref: './resetToken.yaml'
+
+/connect-token:
+  $ref: './connectToken.yaml'
+
+/merge-token:
+    $ref: './mergeToken.yaml'
+
+/topics:
+  $ref: './topics.yaml'
+
+/topics/{topic_id}:
+  $ref: './topicsID.yaml'
+
+/topics/{topic_id}/Suggestions:
+  $ref: './topicsIDSuggestions.yaml'
+
+/active-topics:
+  $ref: './activeTopics.yaml'
+
+/topic-count:
+  $ref: './topicCount.yaml'
+
+/bookmarked-topics:
+  $ref: './bookmarkedTopics.yaml'
+
+/bookmarked-topics/{topic_id}:
+  $ref: './bookmarkedTopicsID.yaml'
+
+/users:
+  $ref: './users.yaml'
+
+/users/{user_id}:
+  $ref: './usersID.yaml'
+
+/confirmation/{email_token}:
+  $ref: './confirmation.yaml'
+
+/password:
+  $ref: './resetPassword.yaml'
+
+/change-password:
+  $ref: './changePassword.yaml'
+
+/me:
+  $ref: './me.yaml'
+
+/upcontent.users/{user_id}:
+  $ref: './upcontentUsers.yaml'
+
+/connections:
+  $ref: './connections.yaml'
+
+/user_count:
+  $ref: './userCount.yaml'

@@ -1,0 +1,19 @@
+get:
+  summary: Bookmarked topics
+  description: Gets a list of bookmarked topics
+  tags:
+    - Topics
+  responses:
+    200:
+      description: Topics bookmarked by user.
+      schema:
+        type: object
+        properties:
+          bookmarked-topics:
+            type: array
+            items:
+              $ref: '#/definitions/Topic'
+    default:
+      description: Unexpected error.
+      schema:
+        $ref: '#/definitions/Error'

@@ -1,0 +1,22 @@
+post:
+  summary: Create merge token --NEEDS WORK--
+  description: |
+    Create merge token
+  tags:
+    - User
+  responses:
+    200:
+      description: User succesfully created.
+      schema:
+        type: object
+        properties:
+          merge-token:
+            type: string
+            format: uuid
+            description: --NEEDS DESCRIPTION--.
+    403:
+      description: User not connected.
+    default:
+      description: Unexpected error.
+      schema:
+        $ref: '#/definitions/Error'

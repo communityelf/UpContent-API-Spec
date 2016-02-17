@@ -1,0 +1,60 @@
+get:
+  summary: Get state --NEEDS WORK--
+  description: |
+    Get state
+  tags:
+    - User
+  parameters:
+    - name: p_id
+      in: path
+      required: true
+      type: string
+      format: uuid
+  responses:
+    200:
+      description: Returns state.
+      schema:
+        type: object
+        properties:
+          state:
+            type: number
+            description: --NEEDS WORK--
+    404:
+      description: State not found.
+    default:
+      description: Unexpected error.
+      schema:
+        $ref: '#/definitions/Error'
+put:
+  summary: Set state --NEEDS WORK--
+  description: |
+    Set state
+  tags:
+    - User
+  parameters:
+    - name: p_id
+      in: path
+      required: true
+      type: string
+      format: uuid
+    - name: data
+      in: body
+      required: true
+      schema:
+        type: object
+        properties:
+          state:
+            type: string
+            description: --NEEDS WORK--
+          params:
+            type: string
+            description: --NEEDS WORK--
+  responses:
+    200:
+      description: State set.
+    400:
+      description: Missing required field. --NEEDS WORK--
+    default:
+      description: Unexpected error.
+      schema:
+        $ref: '#/definitions/Error'

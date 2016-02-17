@@ -1,0 +1,23 @@
+get:
+  summary: Topic Limit
+  description: Maximum number of topics a user can utilize.
+  tags:
+    - Topics
+  responses:
+    200:
+      description: Breakdown of topic allowance.
+      schema:
+        type: object
+        items:
+          type: object
+        properties:
+          promo_count:
+            type: integer
+            description: Number of extra topics accrued from promotions
+          plan_count:
+            type: integer
+            description: Number of topics allowed by subscription
+    default:
+      description: Unexpected error.
+      schema:
+        $ref: '#/definitions/Error'

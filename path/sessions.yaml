@@ -1,0 +1,46 @@
+post:
+  summary: Create UpContent session
+  description: |
+    Create UpContent session
+  tags:
+    - User
+  parameters:
+    - name: data
+      in: body
+      required: true
+      schema:
+        type: object
+        properties:
+          email:
+            type: string
+            format: email
+          password:
+            type: string
+            format: password
+  responses:
+    200:
+      description: Session created.
+      schema:
+       $ref: '#/definitions/User-Session'
+    400:
+      description: Missing field.
+      schema:
+        type: object
+        properties:
+          email:
+            type: string
+            format: email
+          password:
+            type: string
+            format: password
+    401:
+      description: User was not found.
+      schema:
+        type: object
+        properties:
+          email:
+            type: string
+    default:
+      description: Unexpected error.
+      schema:
+        $ref: '#/definitions/Error'

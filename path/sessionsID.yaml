@@ -1,0 +1,49 @@
+get:
+  summary: Create hootsuite session
+  description: |
+    Create hootsuite session
+  tags:
+    - User
+  parameters:
+    - name: session_id
+      in: path
+      required: true
+      type: string
+      format: uuid
+  responses:
+    200:
+      description: Session retrieved.
+      schema:
+       $ref: '#/definitions/User-Session'
+    401:
+      description: Invalid session id
+      schema:
+        type: object
+        properties:
+          session_id:
+            type: string
+    default:
+      description: Unexpected error.
+      schema:
+        $ref: '#/definitions/Error'
+delete:
+  summary: End UpContent session
+  description: |
+    End UpContent session
+  tags:
+    - User
+  parameters:
+    - name: session_id
+      in: path
+      required: true
+      type: string
+      format: uuid
+  responses:
+    200:
+      description: Session retrieved.
+      schema:
+       $ref: '#/definitions/User-Session'
+    default:
+      description: Unexpected error.
+      schema:
+        $ref: '#/definitions/Error'

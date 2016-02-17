@@ -1,0 +1,53 @@
+put:
+  summary: Bookmarked topics
+  description: Gets a list of bookmarked topics.
+  tags:
+    - Topics
+  parameters:
+    - name: id
+      in: path
+      description: An identifier for a bookmarked topic.
+      required: true
+      type: string
+      format: uuid
+  responses:
+    200:
+      description: Topic bookmarked.
+      schema:
+        type: object
+        properties:
+          bookmark:
+            type: object
+            properties:
+              id:
+                type: string
+                format: uuid
+                description: Identifier for new bookmark
+    400:
+      description: Not a valid topic id.
+      schema:
+        type: object
+        properties:
+          topic:
+            type: string
+    default:
+      description: Unexpected error.
+      schema:
+        $ref: '#/definitions/Error'
+delete:
+  summary: Delete bookmark
+  description: Removes a bookmarked topic from users topics
+  parameters:
+    - name: id
+      in: path
+      description: An identifier for a bookmarked topic.
+      required: true
+      type: string
+      format: uuid
+  responses:
+    200:
+      description: Bookmark succesfully removed
+    default:
+      description: Unexpected error.
+      schema:
+        $ref: '#/definitions/Error'

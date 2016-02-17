@@ -1,0 +1,18 @@
+get:
+  summary: Get status of api
+  description: |
+    Check to see if api is running
+  tags:
+    - Diagnostic
+  responses:
+    200:
+      description: Payment forcast found.
+      schema:
+        type: object
+        properties:
+          status:
+            type: boolean
+    default:
+      description: Unexpected error.
+      schema:
+        $ref: '#/definitions/Error'

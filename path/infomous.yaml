@@ -1,0 +1,46 @@
+get:
+  summary: Get influence graph
+  description: |
+    Get influence graph
+  tags:
+    - Suggestions
+  parameters:
+    - name: data
+      in: body
+      required: true
+      schema:
+        type: object
+        properties:
+          feed_url:
+            type: string
+  responses:
+    200:
+      description: Payment forcast found.
+      schema:
+        type: object
+        properties:
+          words:
+            type: array
+            items:
+              type: string
+          sources:
+            type: object
+            properties:
+              attributes:
+                type: object
+                additionalProperties: {}
+    500:
+      description: Could not retrieve payment forcast
+      schema:
+        type: object
+        properties:
+          message:
+            type: string
+    502:
+      description: Unexpected error
+    504:
+      description: Infomous timed out
+    default:
+      description: Unexpected error.
+      schema:
+        $ref: '#/definitions/Error'

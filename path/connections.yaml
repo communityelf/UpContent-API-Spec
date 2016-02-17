@@ -1,0 +1,27 @@
+post:
+  summary: Connect to Upcontent --NEEDS WORK--
+  description: |
+    Creates a user session to upcontent
+  tags:
+    - User
+    - Sign Up
+  responses:
+    201:
+      description: User connected.
+      schema:
+        type: object
+        properties:
+          user:
+            type: string
+            format: uuid
+            description: A unique identifier for a user.
+    400:
+      description: Type error.
+    404:
+      description: User not found.
+    409:
+      description: User not found.
+    default:
+      description: Unexpected error.
+      schema:
+        $ref: '#/definitions/Error'

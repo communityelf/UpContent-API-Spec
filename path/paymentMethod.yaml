@@ -1,0 +1,36 @@
+get:
+  summary: Get payment method
+  description: |
+    Get payment method
+  tags:
+    - User
+    - Subscription
+  responses:
+    200:
+      description: Session created.
+      schema:
+        $ref: '#/definitions/Payment'
+    404:
+      description: User does not have a subscription
+    default:
+      description: Unexpected error.
+      schema:
+        $ref: '#/definitions/Error'
+put:
+  summary: Add payment method
+  description: |
+    Add payment method
+  tags:
+    - User
+    - Subscription
+  responses:
+    201:
+      description: Session created.
+    400:
+      description: Stripe error --NEEDS WORK--
+    404:
+      description: User is not a stripe customer
+    default:
+      description: Unexpected error.
+      schema:
+        $ref: '#/definitions/Error'

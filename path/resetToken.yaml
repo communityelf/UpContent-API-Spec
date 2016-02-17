@@ -1,0 +1,33 @@
+post:
+  summary: Get password reset-token
+  description: |
+    Sends email to user to reset password
+  tags:
+    - User
+  parameters:
+    - name: data
+      in: body
+      required: true
+      schema:
+        type: object
+        properties:
+          email:
+            type: string
+            format: email
+            description: Users email address.
+  responses:
+    200:
+      description: User succesfully created.
+      schema:
+        type: object
+        properties:
+          user_id:
+            type: string
+            format: uuid
+            description: An identifier for the new user.
+    400:
+      description: Missing a required field.
+    default:
+      description: Unexpected error.
+      schema:
+        $ref: '#/definitions/Error'

@@ -1,0 +1,8 @@
+type: object
+properties:
+  response:
+    type: string
+    description: Error returned by server.
+  status:
+    type: integer
+    description: HTTP status code returned by server

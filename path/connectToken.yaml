@@ -1,0 +1,46 @@
+post:
+  summary: Create connect token --NEEDS WORK--
+  description: |
+    Create connect token
+  tags:
+    - User
+  parameters:
+    - name: data
+      in: body
+      required: true
+      schema:
+        type: object
+        properties:
+          identifier:
+            type: string
+            format: uuid
+            description: --Needs description--.
+          token:
+            type: string
+            format: uuid
+            description: --Needs description--.
+          timestamp:
+            type: string
+            format: dateTime
+            description: --Needs description--.
+  responses:
+    200:
+      description: User succesfully created.
+      schema:
+        type: object
+        properties:
+          connect-token:
+            type: string
+            format: uuid
+            description: --NEEDS DESCRIPTION--.
+    400:
+      description: Missing a required field.
+      schema:
+        type: string
+        description: Missing field
+    404:
+      description: Token not valid.
+    default:
+      description: Unexpected error.
+      schema:
+        $ref: '#/definitions/Error'

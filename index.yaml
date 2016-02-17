@@ -1,0 +1,110 @@
+swagger: '2.0'
+# the domain of the service
+host: api.upcontent.com
+# array of all schemes that your API supports
+schemes:
+  - https
+# will be prefixed to all paths
+basePath: https://api.upcontent.com/
+produces:
+  - application/vnd.upcontent+json; version=1.0
+info:
+  title: UpContent Platform API
+  description: UpContent content discovery platform API.
+  version: "1.0.0"
+paths:
+  # $ref: "http://localhost:8000/upc/path/index.yaml"
+  /infomous-graph:
+    $ref: 'http://localhost:8000/upc/path/infomous.yaml'
+
+  /diagnostics/heartbeat:
+    $ref: 'http://localhost:8000/upc/path/diagnostics.yaml'
+
+  /payment-forcast:
+    $ref: 'http://localhost:8000/upc/path/paymentForcast.yaml'
+
+  /payment-history:
+    $ref: 'http://localhost:8000/upc/path/paymentHistory.yaml'
+
+  /payment-method:
+    $ref: 'http://localhost:8000/upc/path/paymentMethod.yaml'
+
+  /hootsuite.sessions:
+    $ref: 'http://localhost:8000/upc/path/hootsuiteSession.yaml'
+
+  /sessions:
+    $ref: 'http://localhost:8000/upc/path/sessions.yaml'
+
+  /sessions/{session_id}:
+    $ref: 'http://localhost:8000/upc/path/sessionsID.yaml'
+
+  /states/{p_id}:
+    $ref: 'http://localhost:8000/upc/path/statesID.yaml'
+
+  /subscription:
+    $ref: 'http://localhost:8000/upc/path/subscription.yaml'
+
+  /suggestions/{suggestion_id}:
+    $ref: 'http://localhost:8000/upc/path/suggestionsID.yaml'
+
+  /influence-graph/{topic_id}:
+    $ref: 'http://localhost:8000/upc/path/influenceID.yaml'
+
+  /reset-token:
+    $ref: 'http://localhost:8000/upc/path/resetToken.yaml'
+
+  /connect-token:
+    $ref: 'http://localhost:8000/upc/path/connectToken.yaml'
+
+  /merge-token:
+      $ref: 'http://localhost:8000/upc/path/mergeToken.yaml'
+
+  /topics:
+    $ref: 'http://localhost:8000/upc/path/topics.yaml'
+
+  /topics/{topic_id}:
+    $ref: 'http://localhost:8000/upc/path/topicsID.yaml'
+
+  /topics/{topic_id}/Suggestions:
+    $ref: 'http://localhost:8000/upc/path/topicsIDSuggestions.yaml'
+
+  /active-topics:
+    $ref: 'http://localhost:8000/upc/path/activeTopics.yaml'
+
+  /topic-count:
+    $ref: 'http://localhost:8000/upc/path/topicCount.yaml'
+
+  /bookmarked-topics:
+    $ref: 'http://localhost:8000/upc/path/bookmarkedTopics.yaml'
+
+  /bookmarked-topics/{topic_id}:
+    $ref: 'http://localhost:8000/upc/path/bookmarkedTopicsID.yaml'
+
+  /users:
+    $ref: 'http://localhost:8000/upc/path/users.yaml'
+
+  /users/{user_id}:
+    $ref: 'http://localhost:8000/upc/path/usersID.yaml'
+
+  /confirmation/{email_token}:
+    $ref: 'http://localhost:8000/upc/path/confirmation.yaml'
+
+  /password:
+    $ref: 'http://localhost:8000/upc/path/resetPassword.yaml'
+
+  /change-password:
+    $ref: 'http://localhost:8000/upc/path/changePassword.yaml'
+
+  /me:
+    $ref: 'http://localhost:8000/upc/path/me.yaml'
+
+  /upcontent.users/{user_id}:
+    $ref: 'http://localhost:8000/upc/path/upcontentUsers.yaml'
+
+  /connections:
+    $ref: 'http://localhost:8000/upc/path/connections.yaml'
+
+  /user_count:
+    $ref: 'http://localhost:8000/upc/path/userCount.yaml'
+definitions:
+  $ref: "http://localhost:8000/upc/definitions/index.yaml"
