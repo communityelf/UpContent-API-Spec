@@ -9,7 +9,7 @@ get:
     200:
       description: Payment history found.
       schema:
-        $ref: '#/definitions/History'
+        $ref: 'http://localhost:8000/upc/definitions/History'
     500:
       description: User does not have a subscription
       schema:
@@ -20,4 +20,4 @@ get:
     default:
       description: Unexpected error.
       schema:
-        $ref: '#/definitions/Error'
+        $ref: 'http://localhost:8000/upc/definitions/Error'

@@ -12,8 +12,8 @@ get:
           bookmarked-topics:
             type: array
             items:
-              $ref: '#/definitions/Topic'
+              $ref: 'http://localhost:8000/upc/definitions/Topic'
     default:
       description: Unexpected error.
       schema:
-        $ref: '#/definitions/Error'
+        $ref: 'http://localhost:8000/upc/definitions/Error'

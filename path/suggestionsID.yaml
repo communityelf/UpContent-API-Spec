@@ -14,11 +14,11 @@ get:
     200:
       description: Suggestion found.
       schema:
-        $ref: '#/definitions/Suggestion'
+        $ref: 'http://localhost:8000/upc/definitions/Suggestion'
     default:
       description: Unexpected error.
       schema:
-        $ref: '#/definitions/Error'
+        $ref: 'http://localhost:8000/upc/definitions/Error'
 patch:
   summary: Update suggestion.
   description: |
@@ -39,7 +39,7 @@ patch:
     default:
       description: Unexpected error.
       schema:
-        $ref: '#/definitions/Error'
+        $ref: 'http://localhost:8000/upc/definitions/Error'
 put:
   summary: Update suggestion.
   description: |
@@ -60,7 +60,7 @@ put:
     default:
       description: Unexpected error.
       schema:
-        $ref: '#/definitions/Error'
+        $ref: 'http://localhost:8000/upc/definitions/Error'
 delete:
   summary: Delete suggestion.
   description: |
@@ -81,4 +81,4 @@ delete:
     default:
       description: Unexpected error.
       schema:
-        $ref: '#/definitions/Error'
+        $ref: 'http://localhost:8000/upc/definitions/Error'

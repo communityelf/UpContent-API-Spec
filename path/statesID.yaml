@@ -24,7 +24,7 @@ get:
     default:
       description: Unexpected error.
       schema:
-        $ref: '#/definitions/Error'
+        $ref: 'http://localhost:8000/upc/definitions/Error'
 put:
   summary: Set state --NEEDS WORK--
   description: |
@@ -57,4 +57,4 @@ put:
     default:
       description: Unexpected error.
       schema:
-        $ref: '#/definitions/Error'
+        $ref: 'http://localhost:8000/upc/definitions/Error'
