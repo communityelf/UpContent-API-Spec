@@ -41,7 +41,7 @@
   $ref: './connectToken.yaml'
 
 /merge-token:
-    $ref: './mergeToken.yaml'
+  $ref: './mergeToken.yaml'
 
 /topics:
   $ref: './topics.yaml'

@@ -1,13 +1,13 @@
 put:
-  summary: Get user info --NEEDS WORK--
+  summary: Get user info
   description: |
-    Get a specific user uuID or if user_ID = "me" get current user
+    Get a specific user using the ID provided or if user_id = "me" get current user
   tags:
     - User
   parameters:
     - name: user_id
       in: path
-      description: Identifier for user
+      description: Unique identifier for a user
       required: true
       type: string
   responses:
@@ -22,7 +22,7 @@ put:
               id:
                 type: string
                 format: uuid
-                description: A unique identifier for a user
+                description: Unique identifier for a user
               email:
                 type: string
                 format: email

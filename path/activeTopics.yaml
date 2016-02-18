@@ -17,7 +17,7 @@ get:
     default:
       description: Unexpected error.
       schema:
-        $ref: 'http://localhost:8000/definitions/error.yaml'
+        $ref: 'http://localhost:8000/upc/definitions/error.yaml'
 put:
   summary: Set active topics
   description: Set topic(s) to active.
@@ -33,4 +33,4 @@ put:
     default:
       description: Unexpected error.
       schema:
-        $ref: 'http://localhost:8000/definitions/error.yaml'
+        $ref: 'http://localhost:8000/upc/definitions/error.yaml'

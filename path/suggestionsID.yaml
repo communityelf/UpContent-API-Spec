@@ -1,7 +1,7 @@
 get:
-  summary: Get a suggestion
+  summary: Get suggestion
   description: |
-    Retrieves specified suggesiton
+    Retrieves specific suggestion using the suggestion ID provided
   tags:
     - Suggestions
   parameters:
@@ -12,17 +12,17 @@ get:
       format: uuid
   responses:
     200:
-      description: Suggestion found.
+      description: Suggestion found
       schema:
         $ref: 'http://localhost:8000/upc/definitions/suggestion.yaml'
     default:
-      description: Unexpected error.
+      description: Unexpected error
       schema:
         $ref: 'http://localhost:8000/upc/definitions/error.yaml'
 patch:
-  summary: Update suggestion.
+  summary: Update suggestion
   description: |
-    Updates specified suggestion
+    Updates specified suggestion using the suggestion ID provided
   tags:
     - Suggestions
   parameters:
@@ -33,17 +33,17 @@ patch:
       format: uuid
   responses:
     200:
-      description: Suggestion updated.
+      description: Suggestion updated
     404:
-      description: Suggestion does not exist or user doesn't have permission to change suggestion.
+      description: Suggestion does not exist or user does not have permission to change suggestion
     default:
-      description: Unexpected error.
+      description: Unexpected error
       schema:
         $ref: 'http://localhost:8000/upc/definitions/error.yaml'
 put:
-  summary: Update suggestion.
+  summary: Update suggestion
   description: |
-    Updates specified suggestion
+    Updates specified suggestion using the suggestion ID provided
   tags:
     - Suggestions
   parameters:
@@ -54,17 +54,17 @@ put:
       format: uuid
   responses:
     200:
-      description: Suggestion updated.
+      description: Suggestion updated
     404:
-      description: Suggestion does not exist or user doesn't have permission to change suggestion.
+      description: Suggestion does not exist or user does not have permission to change suggestion
     default:
-      description: Unexpected error.
+      description: Unexpected error
       schema:
         $ref: 'http://localhost:8000/upc/definitions/error.yaml'
 delete:
-  summary: Delete suggestion.
+  summary: Delete suggestion
   description: |
-    Delete specified suggestion
+    Delete specified suggestion using the suggestion ID provided
   tags:
     - Suggestions
   parameters:
@@ -75,10 +75,10 @@ delete:
       format: uuid
   responses:
     200:
-      description: Suggestion deleted.
+      description: Suggestion deleted
     403:
-      description: Suggestion does not exist or user doesn't have permission to change suggestion.
+      description: Suggestion does not exist or user does not have permission to change suggestion
     default:
-      description: Unexpected error.
+      description: Unexpected error
       schema:
         $ref: 'http://localhost:8000/upc/definitions/error.yaml'

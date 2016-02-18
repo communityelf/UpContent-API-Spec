@@ -7,7 +7,7 @@ patch:
   parameters:
     - name: id
       in: path
-      description: Unique identifier for the topic to be deleted
+      description: Unique identifier used when updating a topic
       required: true
       type: string
       format: uuid
@@ -70,12 +70,7 @@ get:
     200:
       description: Topic found
       schema:
-        type: object
-        properties:
-          topic:
-            type: object
-            items:
-              $ref: 'http://localhost:8000/upc/definitions/topic.yaml'
+        $ref: 'http://localhost:8000/upc/definitions/topic.yaml'
     400:
       description: Improperly formatted request
     404:

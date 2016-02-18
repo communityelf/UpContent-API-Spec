@@ -1,8 +1,8 @@
 /subscription:
   put:
-    summary: Create subscription
+    summary: Create Stripe subscription
     description: |
-      Create subscription
+      Create Stripe subscription --NEEDS WORK--
     tags:
       - User
     parameters:
@@ -14,50 +14,52 @@
           properties:
             plan:
               type: string
+              description: --NEEDS WORK--
+
     responses:
       200:
-        description: Subscription created.
+        description: Subscription created
       400:
-        description: Error create subscription.
+        description: Error create subscription
         schema:
           type: object
           properties:
             error:
               type: string
       default:
-        description: Unexpected error.
+        description: Unexpected error
         schema:
           $ref: 'http://localhost:8000/upc/definitions/error.yaml'
   delete:
-    summary: Delete subscription.
+    summary: Delete Stripe subscription
     description: |
-      Delete subscription
+      Delete Stripe subscription, if one exists
     tags:
       - User
     responses:
       200:
-        description: Subscription deleted.
+        description: Subscription deleted
       default:
-        description: Unexpected error.
+        description: Unexpected error
         schema:
           $ref: 'http://localhost:8000/upc/definitions/error.yaml'
   get:
-    summary: Get subscription.
+    summary: Get Stripe subscription
     description: |
-      Create subscription.
+      Get Stripe subscription length and package
     tags:
       - User
     responses:
       200:
-        description: Subscription created.
+        description: Stripe subscription info
         schema:
           type: object
           properties:
             subscription:
               type: string
       404:
-        description: Could not find subscription.
+        description: Could not find subscription
       default:
-        description: Unexpected error.
+        description: Unexpected error
         schema:
           $ref: 'http://localhost:8000/upc/definitions/error.yaml'

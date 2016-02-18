@@ -1,11 +1,11 @@
 get:
-  summary: Get suggestions for topic
+  summary: Get suggestions
   description: |
     Returns a list of suggestions for a specfic topic
     using the topic ID provided
   tags:
     - Topics
-      Suggestions
+    - Suggestions
   parameters:
     - name: id
       in: path
@@ -28,6 +28,6 @@ get:
     404:
       description: Topic ID does not exist, or is owned by another user
     default:
-      description: Unexpected error.
+      description: Unexpected error
       schema:
         $ref: 'http://localhost:8000/upc/definitions/error.yaml'

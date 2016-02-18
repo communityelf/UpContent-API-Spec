@@ -57,7 +57,7 @@ paths:
     $ref: 'http://localhost:8000/upc/path/connectToken.yaml'
 
   /merge-token:
-      $ref: 'http://localhost:8000/upc/path/mergeToken.yaml'
+    $ref: 'http://localhost:8000/upc/path/mergeToken.yaml'
 
   /topics:
     $ref: 'http://localhost:8000/upc/path/topics.yaml'
@@ -107,4 +107,4 @@ paths:
   /user_count:
     $ref: 'http://localhost:8000/upc/path/userCount.yaml'
 definitions:
-  $ref: "http://localhost:8000/upc/definitions/index.yaml"
+  $ref: 'http://localhost:8000/upc/definitions/index.yaml'
