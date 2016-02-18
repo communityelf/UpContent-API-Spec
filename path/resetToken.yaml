@@ -14,20 +14,13 @@ post:
           email:
             type: string
             format: email
-            description: Users email address.
+            description: Users email address
   responses:
     200:
-      description: User succesfully created.
-      schema:
-        type: object
-        properties:
-          user_id:
-            type: string
-            format: uuid
-            description: An identifier for the new user.
+      description: Reset email password sent
     400:
-      description: Missing a required field.
+      description: Email not found
     default:
-      description: Unexpected error.
+      description: Unexpected error
       schema:
         $ref: 'http://spec.upcontent.com/upc/definitions/error.yaml'
