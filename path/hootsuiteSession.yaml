@@ -21,7 +21,7 @@ post:
     200:
       description: Session created.
       schema:
-       $ref: 'http://localhost:8000/upc/definitions/userSession.yaml'
+       $ref: 'http://spec.upcontent.com/upc/definitions/userSession.yaml'
     400:
       description: Missing field.
       schema:
@@ -42,4 +42,4 @@ post:
     default:
       description: Unexpected error.
       schema:
-        $ref: 'http://localhost:8000/upc/definitions/error.yaml'
+        $ref: 'http://spec.upcontent.com/upc/definitions/error.yaml'

@@ -8,11 +8,11 @@ get:
     200:
       description: User found.
       schema:
-        $ref: 'http://localhost:8000/upc/definitions/user.yaml'
+        $ref: 'http://spec.upcontent.com/upc/definitions/user.yaml'
     default:
       description: Unexpected error.
       schema:
-        $ref: 'http://localhost:8000/upc/definitions/error.yaml'
+        $ref: 'http://spec.upcontent.com/upc/definitions/error.yaml'
 
 put:
   summary: Update user profile
@@ -52,4 +52,4 @@ put:
     default:
       description: Unexpected error.
       schema:
-        $ref: 'http://localhost:8000/upc/definitions/error.yaml'
+        $ref: 'http://spec.upcontent.com/upc/definitions/error.yaml'

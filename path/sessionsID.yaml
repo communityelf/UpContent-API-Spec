@@ -14,7 +14,7 @@ get:
     200:
       description: Session retrieved
       schema:
-       $ref: 'http://localhost:8000/upc/definitions/userSession.yaml'
+       $ref: 'http://spec.upcontent.com/upc/definitions/userSession.yaml'
     401:
       description: Invalid session id
       schema:
@@ -25,7 +25,7 @@ get:
     default:
       description: Unexpected error
       schema:
-        $ref: 'http://localhost:8000/upc/definitions/error.yaml'
+        $ref: 'http://spec.upcontent.com/upc/definitions/error.yaml'
 delete:
   summary: End UpContent session
   description: |
@@ -42,8 +42,8 @@ delete:
     200:
       description: Session retrieved
       schema:
-       $ref: 'http://localhost:8000/upc/definitions/userSession.yaml'
+       $ref: 'http://spec.upcontent.com/upc/definitions/userSession.yaml'
     default:
       description: Unexpected error
       schema:
-        $ref: 'http://localhost:8000/upc/definitions/error.yaml'
+        $ref: 'http://spec.upcontent.com/upc/definitions/error.yaml'

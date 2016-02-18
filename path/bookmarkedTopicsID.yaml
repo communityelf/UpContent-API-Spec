@@ -33,7 +33,7 @@ put:
     default:
       description: Unexpected error.
       schema:
-        $ref: 'http://localhost:8000/upc/definitions/error.yaml'
+        $ref: 'http://spec.upcontent.com/upc/definitions/error.yaml'
 delete:
   summary: Delete bookmark
   description: Removes a bookmarked topic from users topics
@@ -50,4 +50,4 @@ delete:
     default:
       description: Unexpected error.
       schema:
-        $ref: 'http://localhost:8000/upc/definitions/error.yaml'
+        $ref: 'http://spec.upcontent.com/upc/definitions/error.yaml'
