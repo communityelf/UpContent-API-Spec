@@ -1,16 +1,16 @@
 Error:
-  $ref: 'http://localhost:8000/upc/definitions/error.yaml'
+  $ref: 'http://spec.upcontent.com/upc/definitions/error.yaml'
 Forcast:
-  $ref: 'http://localhost:8000/upc/definitions/forcast.yaml'
+  $ref: 'http://spec.upcontent.com/upc/definitions/forcast.yaml'
 History:
-  $ref: 'http://localhost:8000/upc/definitions/history.yaml'
+  $ref: 'http://spec.upcontent.com/upc/definitions/history.yaml'
 Payment:
-  $ref: 'http://localhost:8000/upc/definitions/payment.yaml'
+  $ref: 'http://spec.upcontent.com/upc/definitions/payment.yaml'
 User-Session:
-  $ref: 'http://localhost:8000/upc/definitions/userSession.yaml'
+  $ref: 'http://spec.upcontent.com/upc/definitions/userSession.yaml'
 Suggestion:
-  $ref: 'http://localhost:8000/upc/definitions/suggestion.yaml'
+  $ref: 'http://spec.upcontent.com/upc/definitions/suggestion.yaml'
 Topic:
-  $ref: 'http://localhost:8000/upc/definitions/topic.yaml'
+  $ref: 'http://spec.upcontent.com/upc/definitions/topic.yaml'
 User:
-  $ref: 'http://localhost:8000/upc/definitions/user.yaml'
+  $ref: 'http://spec.upcontent.com/upc/definitions/user.yaml'

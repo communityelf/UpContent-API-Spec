@@ -7,104 +7,108 @@ schemes:
 # will be prefixed to all paths
 basePath: /
 produces:
-  - application/vnd.upcontent+json; version=1.0
+  - application/json
+security:
+  type: "apiKey"
+  name: "Authorization"
+  in: "header"
 info:
   title: UpContent Platform API
   description: UpContent content discovery platform API.
   version: "1.0.0"
 paths:
-  # $ref: "http://localhost:8000/upc/path/index.yaml"
+  # $ref: "http://spec.upcontent.com/upc/path/index.yaml"
   /infomous-graph:
-    $ref: 'http://localhost:8000/upc/path/infomous.yaml'
+    $ref: 'http://spec.upcontent.com/upc/path/infomous.yaml'
 
   /diagnostics/heartbeat:
-    $ref: 'http://localhost:8000/upc/path/diagnostics.yaml'
+    $ref: 'http://spec.upcontent.com/upc/path/diagnostics.yaml'
 
   /payment-forcast:
-    $ref: 'http://localhost:8000/upc/path/paymentForcast.yaml'
+    $ref: 'http://spec.upcontent.com/upc/path/paymentForcast.yaml'
 
   /payment-history:
-    $ref: 'http://localhost:8000/upc/path/paymentHistory.yaml'
+    $ref: 'http://spec.upcontent.com/upc/path/paymentHistory.yaml'
 
   /payment-method:
-    $ref: 'http://localhost:8000/upc/path/paymentMethod.yaml'
+    $ref: 'http://spec.upcontent.com/upc/path/paymentMethod.yaml'
 
   /hootsuite.sessions:
-    $ref: 'http://localhost:8000/upc/path/hootsuiteSession.yaml'
+    $ref: 'http://spec.upcontent.com/upc/path/hootsuiteSession.yaml'
 
   /sessions:
-    $ref: 'http://localhost:8000/upc/path/sessions.yaml'
+    $ref: 'http://spec.upcontent.com/upc/path/sessions.yaml'
 
   /sessions/{session_id}:
-    $ref: 'http://localhost:8000/upc/path/sessionsID.yaml'
+    $ref: 'http://spec.upcontent.com/upc/path/sessionsID.yaml'
 
   /states/{p_id}:
-    $ref: 'http://localhost:8000/upc/path/statesID.yaml'
+    $ref: 'http://spec.upcontent.com/upc/path/statesID.yaml'
 
   /subscription:
-    $ref: 'http://localhost:8000/upc/path/subscription.yaml'
+    $ref: 'http://spec.upcontent.com/upc/path/subscription.yaml'
 
   /suggestions/{suggestion_id}:
-    $ref: 'http://localhost:8000/upc/path/suggestionsID.yaml'
+    $ref: 'http://spec.upcontent.com/upc/path/suggestionsID.yaml'
 
   /influence-graph/{topic_id}:
-    $ref: 'http://localhost:8000/upc/path/influenceID.yaml'
+    $ref: 'http://spec.upcontent.com/upc/path/influenceID.yaml'
 
   /reset-token:
-    $ref: 'http://localhost:8000/upc/path/resetToken.yaml'
+    $ref: 'http://spec.upcontent.com/upc/path/resetToken.yaml'
 
   /connect-token:
-    $ref: 'http://localhost:8000/upc/path/connectToken.yaml'
+    $ref: 'http://spec.upcontent.com/upc/path/connectToken.yaml'
 
   /merge-token:
-    $ref: 'http://localhost:8000/upc/path/mergeToken.yaml'
+    $ref: 'http://spec.upcontent.com/upc/path/mergeToken.yaml'
 
   /topics:
-    $ref: 'http://localhost:8000/upc/path/topics.yaml'
+    $ref: 'http://spec.upcontent.com/upc/path/topics.yaml'
 
   /topics/{topic_id}:
-    $ref: 'http://localhost:8000/upc/path/topicsID.yaml'
+    $ref: 'http://spec.upcontent.com/upc/path/topicsID.yaml'
 
   /topics/{topic_id}/Suggestions:
-    $ref: 'http://localhost:8000/upc/path/topicsIDSuggestions.yaml'
+    $ref: 'http://spec.upcontent.com/upc/path/topicsIDSuggestions.yaml'
 
   /active-topics:
-    $ref: 'http://localhost:8000/upc/path/activeTopics.yaml'
+    $ref: 'http://spec.upcontent.com/upc/path/activeTopics.yaml'
 
   /topic-count:
-    $ref: 'http://localhost:8000/upc/path/topicCount.yaml'
+    $ref: 'http://spec.upcontent.com/upc/path/topicCount.yaml'
 
   /bookmarked-topics:
-    $ref: 'http://localhost:8000/upc/path/bookmarkedTopics.yaml'
+    $ref: 'http://spec.upcontent.com/upc/path/bookmarkedTopics.yaml'
 
   /bookmarked-topics/{topic_id}:
-    $ref: 'http://localhost:8000/upc/path/bookmarkedTopicsID.yaml'
+    $ref: 'http://spec.upcontent.com/upc/path/bookmarkedTopicsID.yaml'
 
   /users:
-    $ref: 'http://localhost:8000/upc/path/users.yaml'
+    $ref: 'http://spec.upcontent.com/upc/path/users.yaml'
 
   /users/{user_id}:
-    $ref: 'http://localhost:8000/upc/path/usersID.yaml'
+    $ref: 'http://spec.upcontent.com/upc/path/usersID.yaml'
 
   /confirmation/{email_token}:
-    $ref: 'http://localhost:8000/upc/path/confirmation.yaml'
+    $ref: 'http://spec.upcontent.com/upc/path/confirmation.yaml'
 
   /password:
-    $ref: 'http://localhost:8000/upc/path/resetPassword.yaml'
+    $ref: 'http://spec.upcontent.com/upc/path/resetPassword.yaml'
 
   /change-password:
-    $ref: 'http://localhost:8000/upc/path/changePassword.yaml'
+    $ref: 'http://spec.upcontent.com/upc/path/changePassword.yaml'
 
   /me:
-    $ref: 'http://localhost:8000/upc/path/me.yaml'
+    $ref: 'http://spec.upcontent.com/upc/path/me.yaml'
 
   /upcontent.users/{user_id}:
-    $ref: 'http://localhost:8000/upc/path/upcontentUsers.yaml'
+    $ref: 'http://spec.upcontent.com/upc/path/upcontentUsers.yaml'
 
   /connections:
-    $ref: 'http://localhost:8000/upc/path/connections.yaml'
+    $ref: 'http://spec.upcontent.com/upc/path/connections.yaml'
 
   /user_count:
-    $ref: 'http://localhost:8000/upc/path/userCount.yaml'
+    $ref: 'http://spec.upcontent.com/upc/path/userCount.yaml'
 definitions:
-  $ref: 'http://localhost:8000/upc/definitions/index.yaml'
+  $ref: 'http://spec.upcontent.com/upc/definitions/index.yaml'
