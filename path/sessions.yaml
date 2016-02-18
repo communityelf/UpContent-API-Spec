@@ -1,9 +1,10 @@
 post:
   summary: Create UpContent session
   description: |
-    Create UpContent session
+    Create UpContent user session
   tags:
     - User
+    - Session
   parameters:
     - name: data
       in: body
@@ -34,11 +35,13 @@ post:
             type: string
             format: password
     401:
-      description: User was not found
+      description: User was not found or password hash failed
       schema:
         type: object
         properties:
           email:
+            type: string
+          password:
             type: string
     default:
       description: Unexpected error
