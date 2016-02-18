@@ -5,7 +5,7 @@ host: api.upcontent.com
 schemes:
   - https
 # will be prefixed to all paths
-basePath: https://api.upcontent.com/
+basePath: /
 produces:
   - application/vnd.upcontent+json; version=1.0
 info:
