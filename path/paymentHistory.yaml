@@ -1,23 +1,23 @@
 get:
-  summary: Get payment method
+  summary: Get payment history
   description: |
-    Get payment method
+    Get Stipe payment history
   tags:
     - User
     - Subscription
   responses:
     200:
-      description: Payment history found.
+      description: Payment history found
       schema:
         $ref: 'http://spec.upcontent.com/upc/definitions/history.yaml'
     500:
-      description: User does not have a subscription
+      description: User does not have payment history
       schema:
         type: object
         properties:
           message:
             type: string
     default:
-      description: Unexpected error.
+      description: Unexpected error
       schema:
         $ref: 'http://spec.upcontent.com/upc/definitions/error.yaml'

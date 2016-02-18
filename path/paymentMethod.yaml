@@ -1,36 +1,39 @@
 get:
   summary: Get payment method
   description: |
-    Get payment method
+    Get Stripe payment method
   tags:
     - User
     - Subscription
   responses:
     200:
-      description: Session created.
+      description: Returns payment method
       schema:
         $ref: 'http://spec.upcontent.com/upc/definitions/payment.yaml'
     404:
       description: User does not have a subscription
     default:
-      description: Unexpected error.
+      description: Unexpected error
       schema:
         $ref: 'http://spec.upcontent.com/upc/definitions/error.yaml'
 put:
   summary: Add payment method
   description: |
-    Add payment method
+    Add Stripe payment method
   tags:
     - User
     - Subscription
   responses:
     201:
-      description: Session created.
+      description: Payment method created
     400:
-      description: Stripe error --NEEDS WORK--
+      description: Stripe error
+      type: object
+      properties:
+          type: string
     404:
       description: User is not a stripe customer
     default:
-      description: Unexpected error.
+      description: Unexpected error
       schema:
         $ref: 'http://spec.upcontent.com/upc/definitions/error.yaml'
