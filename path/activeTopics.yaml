@@ -13,11 +13,11 @@ get:
           topics:
             type: array
             items:
-              $ref: 'http://spec.upcontent.com/upc/definitions/topic.yaml'
+              $ref: '../definitions/topic.yaml'
     default:
       description: Unexpected error.
       schema:
-        $ref: 'http://spec.upcontent.com/upc/definitions/error.yaml'
+        $ref: '../definitions/error.yaml'
 put:
   summary: Set active topics
   description: Set topic(s) to active.
@@ -33,4 +33,4 @@ put:
     default:
       description: Unexpected error.
       schema:
-        $ref: 'http://spec.upcontent.com/upc/definitions/error.yaml'
+        $ref: '../definitions/error.yaml'

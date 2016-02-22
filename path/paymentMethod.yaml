@@ -9,13 +9,13 @@ get:
     200:
       description: Returns payment method
       schema:
-        $ref: 'http://spec.upcontent.com/upc/definitions/payment.yaml'
+        $ref: '../definitions/payment.yaml'
     404:
       description: User does not have a subscription
     default:
       description: Unexpected error
       schema:
-        $ref: 'http://spec.upcontent.com/upc/definitions/error.yaml'
+        $ref: '../definitions/error.yaml'
 put:
   summary: Add payment method
   description: |
@@ -26,14 +26,20 @@ put:
   responses:
     201:
       description: Payment method created
+      schema:
+        type: object
+        properties: {}
     400:
       description: Stripe error
-      type: object
-      properties:
-          type: string
+      schema:
+        type: object
+        properties: {}
     404:
       description: User is not a stripe customer
+      schema:
+        type: object
+        properties: {}
     default:
       description: Unexpected error
       schema:
-        $ref: 'http://spec.upcontent.com/upc/definitions/error.yaml'
+        $ref: '../definitions/error.yaml'

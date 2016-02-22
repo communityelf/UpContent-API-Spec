@@ -1,16 +1,16 @@
 Error:
-  $ref: 'http://spec.upcontent.com/upc/definitions/error.yaml'
+  $ref: './error.yaml'
 Forcast:
-  $ref: 'http://spec.upcontent.com/upc/definitions/forcast.yaml'
+  $ref: './forcast.yaml'
 History:
-  $ref: 'http://spec.upcontent.com/upc/definitions/history.yaml'
+  $ref: './history.yaml'
 Payment:
-  $ref: 'http://spec.upcontent.com/upc/definitions/payment.yaml'
+  $ref: './payment.yaml'
 User-Session:
-  $ref: 'http://spec.upcontent.com/upc/definitions/userSession.yaml'
+  $ref: './userSession.yaml'
 Suggestion:
-  $ref: 'http://spec.upcontent.com/upc/definitions/suggestion.yaml'
+  $ref: './suggestion.yaml'
 Topic:
-  $ref: 'http://spec.upcontent.com/upc/definitions/topic.yaml'
+  $ref: './topic.yaml'
 User:
-  $ref: 'http://spec.upcontent.com/upc/definitions/user.yaml'
+  $ref: './user.yaml'

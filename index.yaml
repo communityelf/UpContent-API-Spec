@@ -9,106 +9,109 @@ basePath: /
 produces:
   - application/json
 security:
-  type: "apiKey"
-  name: "Authorization"
-  in: "header"
+  - key: []
+securityDefinitions:
+  key:
+    type: "apiKey"
+    name: "Authorization"
+    in: "header"
 info:
   title: UpContent Platform API
   description: UpContent content discovery platform API.
   version: "1.0.0"
 paths:
-  # $ref: "http://spec.upcontent.com/upc/path/index.yaml"
+  # $ref: "./path/index.yaml"
   /infomous-graph:
-    $ref: 'http://spec.upcontent.com/upc/path/infomous.yaml'
+    $ref: './path/infomous.yaml'
 
   /diagnostics/heartbeat:
-    $ref: 'http://spec.upcontent.com/upc/path/diagnostics.yaml'
+    $ref: './path/diagnostics.yaml'
 
   /payment-forcast:
-    $ref: 'http://spec.upcontent.com/upc/path/paymentForcast.yaml'
+    $ref: './path/paymentForcast.yaml'
 
   /payment-history:
-    $ref: 'http://spec.upcontent.com/upc/path/paymentHistory.yaml'
+    $ref: './path/paymentHistory.yaml'
 
   /payment-method:
-    $ref: 'http://spec.upcontent.com/upc/path/paymentMethod.yaml'
+    $ref: './path/paymentMethod.yaml'
 
   /hootsuite.sessions:
-    $ref: 'http://spec.upcontent.com/upc/path/hootsuiteSession.yaml'
+    $ref: './path/hootsuiteSession.yaml'
 
   /sessions:
-    $ref: 'http://spec.upcontent.com/upc/path/sessions.yaml'
+    $ref: './path/sessions.yaml'
 
   /sessions/{session_id}:
-    $ref: 'http://spec.upcontent.com/upc/path/sessionsID.yaml'
+    $ref: './path/sessionsID.yaml'
 
   /states/{p_id}:
-    $ref: 'http://spec.upcontent.com/upc/path/statesID.yaml'
+    $ref: './path/statesID.yaml'
 
   /subscription:
-    $ref: 'http://spec.upcontent.com/upc/path/subscription.yaml'
+    $ref: './path/subscription.yaml'
 
   /suggestions/{suggestion_id}:
-    $ref: 'http://spec.upcontent.com/upc/path/suggestionsID.yaml'
+    $ref: './path/suggestionsID.yaml'
 
   /influence-graph/{topic_id}:
-    $ref: 'http://spec.upcontent.com/upc/path/influenceID.yaml'
+    $ref: './path/influenceID.yaml'
 
   /reset-token:
-    $ref: 'http://spec.upcontent.com/upc/path/resetToken.yaml'
+    $ref: './path/resetToken.yaml'
 
   /connect-token:
-    $ref: 'http://spec.upcontent.com/upc/path/connectToken.yaml'
+    $ref: './path/connectToken.yaml'
 
   /merge-token:
-    $ref: 'http://spec.upcontent.com/upc/path/mergeToken.yaml'
+    $ref: './path/mergeToken.yaml'
 
   /topics:
-    $ref: 'http://spec.upcontent.com/upc/path/topics.yaml'
+    $ref: './path/topics.yaml'
 
   /topics/{topic_id}:
-    $ref: 'http://spec.upcontent.com/upc/path/topicsID.yaml'
+    $ref: './path/topicsID.yaml'
 
   /topics/{topic_id}/Suggestions:
-    $ref: 'http://spec.upcontent.com/upc/path/topicsIDSuggestions.yaml'
+    $ref: './path/topicsIDSuggestions.yaml'
 
   /active-topics:
-    $ref: 'http://spec.upcontent.com/upc/path/activeTopics.yaml'
+    $ref: './path/activeTopics.yaml'
 
   /topic-count:
-    $ref: 'http://spec.upcontent.com/upc/path/topicCount.yaml'
+    $ref: './path/topicCount.yaml'
 
   /bookmarked-topics:
-    $ref: 'http://spec.upcontent.com/upc/path/bookmarkedTopics.yaml'
+    $ref: './path/bookmarkedTopics.yaml'
 
   /bookmarked-topics/{topic_id}:
-    $ref: 'http://spec.upcontent.com/upc/path/bookmarkedTopicsID.yaml'
+    $ref: './path/bookmarkedTopicsID.yaml'
 
   /users:
-    $ref: 'http://spec.upcontent.com/upc/path/users.yaml'
+    $ref: './path/users.yaml'
 
   /users/{user_id}:
-    $ref: 'http://spec.upcontent.com/upc/path/usersID.yaml'
+    $ref: './path/usersID.yaml'
 
   /confirmation/{email_token}:
-    $ref: 'http://spec.upcontent.com/upc/path/confirmation.yaml'
+    $ref: './path/confirmation.yaml'
 
   /password:
-    $ref: 'http://spec.upcontent.com/upc/path/resetPassword.yaml'
+    $ref: './path/resetPassword.yaml'
 
   /change-password:
-    $ref: 'http://spec.upcontent.com/upc/path/changePassword.yaml'
+    $ref: './path/changePassword.yaml'
 
   /me:
-    $ref: 'http://spec.upcontent.com/upc/path/me.yaml'
+    $ref: './path/me.yaml'
 
   /upcontent.users/{user_id}:
-    $ref: 'http://spec.upcontent.com/upc/path/upcontentUsers.yaml'
+    $ref: './path/upcontentUsers.yaml'
 
   /connections:
-    $ref: 'http://spec.upcontent.com/upc/path/connections.yaml'
+    $ref: './path/connections.yaml'
 
   /user_count:
-    $ref: 'http://spec.upcontent.com/upc/path/userCount.yaml'
+    $ref: './path/userCount.yaml'
 definitions:
-  $ref: 'http://spec.upcontent.com/upc/definitions/index.yaml'
+  $ref: './definitions/index.yaml'

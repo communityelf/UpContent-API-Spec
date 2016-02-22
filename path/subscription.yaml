@@ -1,65 +1,64 @@
-/subscription:
-  put:
-    summary: Create Stripe subscription
-    description: |
-      Create Stripe subscription --NEEDS WORK--
-    tags:
-      - User
-    parameters:
-      - name: data
-        in: body
-        required: true
-        schema:
-          type: object
-          properties:
-            plan:
-              type: string
-              description: --NEEDS WORK--
+put:
+  summary: Create Stripe subscription
+  description: |
+    Create Stripe subscription --NEEDS WORK--
+  tags:
+    - User
+  parameters:
+    - name: data
+      in: body
+      required: true
+      schema:
+        type: object
+        properties:
+          plan:
+            type: string
+            description: --NEEDS WORK--
 
-    responses:
-      200:
-        description: Subscription created
-      400:
-        description: Error create subscription
-        schema:
-          type: object
-          properties:
-            error:
-              type: string
-      default:
-        description: Unexpected error
-        schema:
-          $ref: 'http://spec.upcontent.com/upc/definitions/error.yaml'
-  delete:
-    summary: Delete Stripe subscription
-    description: |
-      Delete Stripe subscription, if one exists
-    tags:
-      - User
-    responses:
-      200:
-        description: Subscription deleted
-      default:
-        description: Unexpected error
-        schema:
-          $ref: 'http://spec.upcontent.com/upc/definitions/error.yaml'
-  get:
-    summary: Get Stripe subscription
-    description: |
-      Get Stripe subscription length and package
-    tags:
-      - User
-    responses:
-      200:
-        description: Stripe subscription info
-        schema:
-          type: object
-          properties:
-            subscription:
-              type: string
-      404:
-        description: Could not find subscription
-      default:
-        description: Unexpected error
-        schema:
-          $ref: 'http://spec.upcontent.com/upc/definitions/error.yaml'
+  responses:
+    200:
+      description: Subscription created
+    400:
+      description: Error create subscription
+      schema:
+        type: object
+        properties:
+          error:
+            type: string
+    default:
+      description: Unexpected error
+      schema:
+        $ref: '../definitions/error.yaml'
+delete:
+  summary: Delete Stripe subscription
+  description: |
+    Delete Stripe subscription, if one exists
+  tags:
+    - User
+  responses:
+    200:
+      description: Subscription deleted
+    default:
+      description: Unexpected error
+      schema:
+        $ref: '../definitions/error.yaml'
+get:
+  summary: Get Stripe subscription
+  description: |
+    Get Stripe subscription length and package
+  tags:
+    - User
+  responses:
+    200:
+      description: Stripe subscription info
+      schema:
+        type: object
+        properties:
+          subscription:
+            type: string
+    404:
+      description: Could not find subscription
+    default:
+      description: Unexpected error
+      schema:
+        $ref: '../definitions/error.yaml'

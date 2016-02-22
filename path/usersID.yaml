@@ -1,7 +1,7 @@
 put:
   summary: Edit user
   description: |
-    Change users name, email, or password.
+    Change users name, email, or password..
   tags:
     - User
   parameters:
@@ -65,4 +65,4 @@ put:
     default:
       description: Unexpected error
       schema:
-        $ref: 'http://spec.upcontent.com/upc/definitions/error.yaml'
+        $ref: '../definitions/error.yaml'

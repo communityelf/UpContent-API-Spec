@@ -1,92 +1,92 @@
 /infomous-graph:
-  $ref: './infomous.yaml'
+  $ref: '../infomous.yaml'
 
 /diagnostics/heartbeat:
-  $ref: './diagnostics.yaml'
+  $ref: '../diagnostics.yaml'
 
 /payment-forcast:
-  $ref: './paymentForcast.yaml'
+  $ref: '../paymentForcast.yaml'
 
 /payment-history:
-  $ref: './paymentHistory.yaml'
+  $ref: '../paymentHistory.yaml'
 
 /payment-method:
-  $ref: './paymentMethod.yaml'
+  $ref: '../paymentMethod.yaml'
 
-/hootsuite.sessions:
-  $ref: './hootsuiteSession.yaml'
+/hootsuite..sessions:
+  $ref: '../hootsuiteSession.yaml'
 
 /sessions:
-  $ref: './sessions.yaml'
+  $ref: '../sessions.yaml'
 
 /sessions/{session_id}:
-  $ref: './sessionsID.yaml'
+  $ref: '../sessionsID.yaml'
 
 /states/{p_id}:
-  $ref: './states.yaml'
+  $ref: '../states.yaml'
 
 /subscription:
-  $ref: './subscription.yaml'
+  $ref: '../subscription.yaml'
 
 /suggestions/{suggestion_id}:
-  $ref: './suggestionsID.yaml'
+  $ref: '../suggestionsID.yaml'
 
 /influence-graph/{topic_id}:
-  $ref: './influenceID.yaml'
+  $ref: '../influenceID.yaml'
 
 /reset-token:
-  $ref: './resetToken.yaml'
+  $ref: '../resetToken.yaml'
 
 /connect-token:
-  $ref: './connectToken.yaml'
+  $ref: '../connectToken.yaml'
 
 /merge-token:
-  $ref: './mergeToken.yaml'
+  $ref: '../mergeToken.yaml'
 
 /topics:
-  $ref: './topics.yaml'
+  $ref: '../topics.yaml'
 
 /topics/{topic_id}:
-  $ref: './topicsID.yaml'
+  $ref: '../topicsID.yaml'
 
 /topics/{topic_id}/Suggestions:
-  $ref: './topicsIDSuggestions.yaml'
+  $ref: '../topicsIDSuggestions.yaml'
 
 /active-topics:
-  $ref: './activeTopics.yaml'
+  $ref: '../activeTopics.yaml'
 
 /topic-count:
-  $ref: './topicCount.yaml'
+  $ref: '../topicCount.yaml'
 
 /bookmarked-topics:
-  $ref: './bookmarkedTopics.yaml'
+  $ref: '../bookmarkedTopics.yaml'
 
 /bookmarked-topics/{topic_id}:
-  $ref: './bookmarkedTopicsID.yaml'
+  $ref: '../bookmarkedTopicsID.yaml'
 
 /users:
-  $ref: './users.yaml'
+  $ref: '../users.yaml'
 
 /users/{user_id}:
-  $ref: './usersID.yaml'
+  $ref: '../usersID.yaml'
 
 /confirmation/{email_token}:
-  $ref: './confirmation.yaml'
+  $ref: '../confirmation.yaml'
 
 /password:
-  $ref: './resetPassword.yaml'
+  $ref: '../resetPassword.yaml'
 
 /change-password:
-  $ref: './changePassword.yaml'
+  $ref: '../changePassword.yaml'
 
 /me:
-  $ref: './me.yaml'
+  $ref: '../me.yaml'
 
-/upcontent.users/{user_id}:
-  $ref: './upcontentUsers.yaml'
+/upcontent..users/{user_id}:
+  $ref: '../upcontentUsers.yaml'
 
 /connections:
-  $ref: './connections.yaml'
+  $ref: '../connections.yaml'
 
 /user_count:
-  $ref: './userCount.yaml'
+  $ref: '../userCount.yaml'

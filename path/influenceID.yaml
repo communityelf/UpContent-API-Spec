@@ -58,4 +58,4 @@ get:
     default:
       description: Unexpected error.
       schema:
-        $ref: 'http://spec.upcontent.com/upc/definitions/error.yaml'
+        $ref: '../definitions/error.yaml'
