@@ -6,11 +6,14 @@ get:
     - User
   responses:
     200:
-      description: User found.
+      description: User found
       schema:
-        $ref: 'http://spec.upcontent.com/upc/definitions/user.yaml'
+        type: object
+        properties:
+          user:
+            $ref: 'http://spec.upcontent.com/upc/definitions/user.yaml'
     default:
-      description: Unexpected error.
+      description: Unexpected error
       schema:
         $ref: 'http://spec.upcontent.com/upc/definitions/error.yaml'
 
@@ -20,36 +23,66 @@ put:
     Updates basic user information
   tags:
     - User
+  parameters:
+    - name: data
+      in: body
+      required: true
+      schema:
+        type: object
+        properties:
+          name:
+            type: string
+            description: Users name
+          handle:
+            type: string
+            description: Social media alias
+          email:
+            type: string
+            format: email
+            description: Users email address
+          location:
+            type: string
+            description: Users geographical location
+          company:
+            type: string
+            description: Users place of employement
+          industry:
+            type: string
+            description: Users area of interest
+          website:
+            type: string
+            description: User/company web url
+
   responses:
     200:
-      description: User updated.
+      description: User updated
     400:
-      description: Type error.
+      description: Type error
     403:
-      description: Authorization error.
+      description: Authorization error
       schema:
         type: object
         properties:
           message:
             type: string
-            description: Description of error.
+            description: Description of error
     409:
-      description: Conflict error.
+      description: Conflict error
       schema:
         type: object
         properties:
           message:
             type: string
-            description: Description of error.
+            description: Description of error
     500:
-      description: Base error.
+      description: Base error
       schema:
         type: object
         properties:
           message:
             type: string
-            description: Description of error.
+            description: Description of error
     default:
-      description: Unexpected error.
+      description: Unexpected error
       schema:
         $ref: 'http://spec.upcontent.com/upc/definitions/error.yaml'

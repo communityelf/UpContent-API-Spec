@@ -13,9 +13,10 @@ get:
         properties:
           feed_url:
             type: string
+            description: --Needs work--
   responses:
     200:
-      description: Payment forcast found.
+      description: Infomous graph found
       schema:
         type: object
         properties:
@@ -23,24 +24,19 @@ get:
             type: array
             items:
               type: string
+              description: --Needs work--
           sources:
             type: object
             properties:
               attributes:
                 type: object
+                description: --Needs work--
                 additionalProperties: {}
-    500:
-      description: Could not retrieve payment forcast
-      schema:
-        type: object
-        properties:
-          message:
-            type: string
     502:
       description: Unexpected error
     504:
       description: Infomous timed out
     default:
-      description: Unexpected error.
+      description: Unexpected error
       schema:
         $ref: 'http://spec.upcontent.com/upc/definitions/error.yaml'

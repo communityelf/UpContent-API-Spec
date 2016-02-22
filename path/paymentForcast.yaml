@@ -11,7 +11,7 @@ get:
       schema:
         $ref: 'http://spec.upcontent.com/upc/definitions/forcast.yaml'
     500:
-      description: Could not retrieve payment forcast
+      description: Unable to retrieve payment forcast
       schema:
         type: object
         properties:

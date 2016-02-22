@@ -6,17 +6,17 @@ post:
     - User
   responses:
     200:
-      description: User succesfully created.
+      description: User succesfully created
       schema:
         type: object
         properties:
           merge-token:
             type: string
             format: uuid
-            description: --NEEDS DESCRIPTION--.
+            description: --NEEDS WORK--
     403:
-      description: User not connected.
+      description: User not connected
     default:
-      description: Unexpected error.
+      description: Unexpected error
       schema:
         $ref: 'http://spec.upcontent.com/upc/definitions/error.yaml'
