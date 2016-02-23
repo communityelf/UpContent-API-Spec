@@ -113,5 +113,3 @@ paths:
 
   /user_count:
     $ref: './path/userCount.yaml'
-definitions:
-  $ref: './definitions/index.yaml'

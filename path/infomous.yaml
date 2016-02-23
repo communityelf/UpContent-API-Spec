@@ -27,11 +27,11 @@ get:
               description: --Needs work--
           sources:
             type: object
-            properties:
-              attributes:
-                type: object
-                description: --Needs work--
-                additionalProperties: {}
+            additionalProperties:
+              type: array
+              items:
+                type: string
+                description: Words associated with the URL.
     502:
       description: Unexpected error
     504:
