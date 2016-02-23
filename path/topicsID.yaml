@@ -5,7 +5,7 @@ patch:
   tags:
     - Topics
   parameters:
-    - name: id
+    - name: topic_id
       in: path
       description: Unique identifier used when updating a topic
       required: true
@@ -36,7 +36,7 @@ delete:
   tags:
     - Topics
   parameters:
-    - name: id
+    - name: topic_id
       in: path
       description: Unique identifier for the topic
       required: true
@@ -60,7 +60,7 @@ get:
   tags:
     - Topics
   parameters:
-    - name: id
+    - name: topic_id
       in: path
       description: Unique identifier of topic to retrieve
       required: true

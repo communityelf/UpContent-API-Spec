@@ -4,7 +4,7 @@ put:
   tags:
     - Topics
   parameters:
-    - name: id
+    - name: topic_id
       in: path
       description: An identifier for a bookmarked topic.
       required: true
@@ -38,7 +38,7 @@ delete:
   summary: Delete bookmark
   description: Removes a bookmarked topic from users topics
   parameters:
-    - name: id
+    - name: topic_id
       in: path
       description: An identifier for a bookmarked topic.
       required: true

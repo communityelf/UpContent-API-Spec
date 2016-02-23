@@ -7,7 +7,7 @@ get:
     - Topics
     - Suggestions
   parameters:
-    - name: id
+    - name: topic_id
       in: path
       description: Unique identifier for a topic
       required: true
