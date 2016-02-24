@@ -1,5 +1,5 @@
 get:
-  operationId: get_suggestions
+  operationId: get_suggestion
   summary: Get suggestion
   description: |
     Retrieves specific suggestion using the suggestion ID provided
@@ -24,29 +24,6 @@ get:
 patch:
   operationId: update_suggestion
   summary: Update suggestion
-  description: |
-    Updates specified suggestion using the suggestion ID provided
-  tags:
-    - Suggestions
-    - Edit
-  parameters:
-    - name: suggestion_id
-      in: path
-      required: true
-      type: string
-      format: uuid
-  responses:
-    200:
-      description: Suggestion updated
-    404:
-      description: Suggestion does not exist or user does not have permission to change suggestion
-    default:
-      description: Unexpected error
-      schema:
-        $ref: '../definitions/error.yaml'
-put:
-  summary: Update suggestion
-  operationId: update_suggestion
   description: |
     Updates specified suggestion using the suggestion ID provided
   tags:
