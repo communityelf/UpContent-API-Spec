@@ -1,9 +1,11 @@
 put:
+  operationId: edit_user
   summary: Edit user
   description: |
     Change users name, email, or password..
   tags:
     - User
+    - Edit
   parameters:
     - name: user_id
       in: path

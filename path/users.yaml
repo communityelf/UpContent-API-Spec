@@ -1,9 +1,11 @@
 post:
+  operationId: create_user
   summary: Create user
   description: |
     Creates a new user when given a name, email, and password..
   tags:
     - User
+    - Create
   parameters:
     - name: data
       in: body

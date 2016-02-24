@@ -1,9 +1,11 @@
 get:
-  summary: Get number of upcontent users --NEEDS WORK--
+  operationId: get_user_count
+  summary: Number of UpContent users
   description: |
-    Get number of upcontent users
+    Get number of UpContent users
   tags:
     - User
+    - Diagnostics
   responses:
     200:
       description: User connected
@@ -11,8 +13,8 @@ get:
         type: object
         properties:
           user-count:
-            type: string
-            description: Unique identifier for a user
+            type: integer
+            description: Number of UpContent users
     default:
       description: Unexpected error
       schema:
