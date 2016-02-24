@@ -1,4 +1,5 @@
 get:
+  operationId: get_all_topics
   summary: List Topics
   description: |
     Retrieves a list of all of the authenticated user's topics
