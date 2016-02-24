@@ -1,27 +1,28 @@
 post:
+  operationId: create_connection
   summary: Connect to Upcontent --NEEDS WORK--
   description: |
     Creates a user session to upcontent
   tags:
     - User
-    - Sign Up
+    - Create
   responses:
     201:
-      description: User connected.
+      description: User connected
       schema:
         type: object
         properties:
           user:
             type: string
             format: uuid
-            description: A unique identifier for a user.
+            description: A unique identifier for a user
     400:
-      description: Type error.
+      description: Type error
     404:
-      description: User not found.
+      description: User not found
     409:
-      description: User not found.
+      description: User not found
     default:
-      description: Unexpected error.
+      description: Unexpected error
       schema:
         $ref: '../definitions/error.yaml'

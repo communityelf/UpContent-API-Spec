@@ -1,18 +1,19 @@
 get:
+  operationId: get_api_status
   summary: Get status of api
   description: |
     Check to see if api is running
   tags:
-    - Diagnostic
+    - Diagnostics
   responses:
     200:
-      description: Payment forcast found.
+      description: UpContent API status
       schema:
         type: object
         properties:
           status:
             type: boolean
     default:
-      description: Unexpected error.
+      description: Unexpected error
       schema:
         $ref: '../definitions/error.yaml'

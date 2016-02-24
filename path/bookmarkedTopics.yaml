@@ -3,9 +3,10 @@ get:
   description: Gets a list of bookmarked topics
   tags:
     - Topics
+    - Get
   responses:
     200:
-      description: Topics bookmarked by user.
+      description: Topics bookmarked by user
       schema:
         type: object
         properties:
@@ -14,6 +15,6 @@ get:
             items:
               $ref: '../definitions/topic.yaml'
     default:
-      description: Unexpected error.
+      description: Unexpected error
       schema:
         $ref: '../definitions/error.yaml'

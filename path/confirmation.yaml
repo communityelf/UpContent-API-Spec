@@ -1,8 +1,10 @@
 put:
+  operationId: confirm_email
   summary: Confirm email
-  description: Confirms email.
+  description: Confirms email
   tags:
     - User
+    - Create
   parameters:
     - name: email_token
       in: path
@@ -11,8 +13,8 @@ put:
       format: uuid
   responses:
     200:
-      description: User confirmed.
+      description: User confirmed
     default:
-      description: Unexpected error.
+      description: Unexpected error
       schema:
         $ref: '../definitions/error.yaml'

@@ -1,9 +1,12 @@
 post:
+  operationId: create_hootsuite_session
   summary: Create hootsuite session
   description: |
     Create hootsuite session
   tags:
     - User
+    - Create
+    - Hootsuite
   parameters:
     - name: data
       in: body
@@ -19,11 +22,11 @@ post:
             type: string
   responses:
     200:
-      description: Session created.
+      description: Session created
       schema:
        $ref: '../definitions/userSession.yaml'
     400:
-      description: Missing field.
+      description: Missing field
       schema:
         type: object
         properties:
@@ -40,6 +43,6 @@ post:
     401:
       description: InvalID hootsuite token
     default:
-      description: Unexpected error.
+      description: Unexpected error
       schema:
         $ref: '../definitions/error.yaml'

@@ -1,9 +1,11 @@
 get:
+  operationId: get_influence
   summary: Get influence graph data
   description: |
     Retrieves data to build influence graph
   tags:
     - Suggestions
+    - Influence
   parameters:
     - name: topic_id
       in: path

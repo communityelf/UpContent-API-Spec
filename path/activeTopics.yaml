@@ -1,12 +1,14 @@
 get:
+  operationId: get_active_topics
   summary: Get active topics
   description: |
     Returns active topics
   tags:
-    - Topics
+    - Active Topics
+    - Get
   responses:
     200:
-      description: Returns all active topics.
+      description: Returns all active topics
       schema:
         type: object
         properties:
@@ -15,22 +17,23 @@ get:
             items:
               $ref: '../definitions/topic.yaml'
     default:
-      description: Unexpected error.
+      description: Unexpected error
       schema:
         $ref: '../definitions/error.yaml'
 put:
   summary: Set active topics
-  description: Set topic(s) to active.
+  description: Set topic(s) to active
   tags:
-    - Topics
+    - Active Topics
+    - Edit
   responses:
     200:
       description: Topics set to active
       schema:
         type: object
     400:
-      description: Active topic limit exceded.
+      description: Active topic limit exceded
     default:
-      description: Unexpected error.
+      description: Unexpected error
       schema:
         $ref: '../definitions/error.yaml'

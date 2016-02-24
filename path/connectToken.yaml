@@ -1,9 +1,11 @@
 post:
+  operationId: create_connect_token
   summary: Create connect token --NEEDS WORK--
   description: |
     Create connect token
   tags:
     - User
+    - Create
   parameters:
     - name: data
       in: body
@@ -14,33 +16,33 @@ post:
           identifier:
             type: string
             format: uuid
-            description: --Needs description--.
+            description: --Needs description--
           token:
             type: string
             format: uuid
-            description: --Needs description--.
+            description: --Needs description--
           timestamp:
             type: string
             format: dateTime
-            description: --Needs description--.
+            description: --Needs description--
   responses:
     200:
-      description: User succesfully created.
+      description: Token succesfully created
       schema:
         type: object
         properties:
           connect-token:
             type: string
             format: uuid
-            description: --NEEDS DESCRIPTION--.
+            description: --NEEDS DESCRIPTION--
     400:
-      description: Missing a required field.
+      description: Missing a required field
       schema:
         type: string
         description: Missing field
     404:
-      description: Token not valid.
+      description: Token not valid
     default:
-      description: Unexpected error.
+      description: Unexpected error
       schema:
         $ref: '../definitions/error.yaml'
