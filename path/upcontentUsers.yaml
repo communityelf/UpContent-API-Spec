@@ -1,5 +1,6 @@
-put:
-  summary: Get user info
+get:
+  operationId: get_user_basic
+  summary: Get basic user info
   description: |
     Get a specific user using the ID provided or if user_id = "me" get current user
   tags:
