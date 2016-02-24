@@ -1,8 +1,10 @@
 get:
+  operationId: get_topic_allowance
   summary: Topic Limit
   description: Maximum number of topics a user can utilize
   tags:
     - Topics
+    - Get
   responses:
     200:
       description: Breakdown of topic allowance

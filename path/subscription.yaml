@@ -1,9 +1,11 @@
 put:
+  operationId: create_subscription
   summary: Create Stripe subscription
   description: |
     Create Stripe subscription --NEEDS WORK--
   tags:
     - User
+    - Create
   parameters:
     - name: data
       in: body
@@ -30,11 +32,13 @@ put:
       schema:
         $ref: '../definitions/error.yaml'
 delete:
+  operationId: delete_subscription
   summary: Delete Stripe subscription
   description: |
     Delete Stripe subscription, if one exists
   tags:
     - User
+    - Delete
   responses:
     200:
       description: Subscription deleted
@@ -43,11 +47,13 @@ delete:
       schema:
         $ref: '../definitions/error.yaml'
 get:
+  operationId: get_subscription
   summary: Get Stripe subscription
   description: |
     Get Stripe subscription length and package
   tags:
     - User
+    - Get
   responses:
     200:
       description: Stripe subscription info

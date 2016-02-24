@@ -1,9 +1,11 @@
 get:
+  operationId: get_user_profile
   summary: Get user profile
   description: |
     Returns basic user information
   tags:
     - User
+    - Get
   responses:
     200:
       description: User found
@@ -18,11 +20,13 @@ get:
         $ref: '../definitions/error.yaml'
 
 put:
+  operationId: update_user_profile
   summary: Update user profile
   description: |
     Updates basic user information
   tags:
     - User
+    - Edit
   parameters:
     - name: data
       in: body

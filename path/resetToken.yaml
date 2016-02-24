@@ -1,9 +1,11 @@
 post:
-  summary: Get password reset-token
+  operationId: send_reset_token
+  summary: Send password reset-token
   description: |
     Sends email to user to reset password
   tags:
     - User
+    - Edit
   parameters:
     - name: data
       in: body

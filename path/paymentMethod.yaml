@@ -1,10 +1,12 @@
 get:
+  operationId: get_payment_method
   summary: Get payment method
   description: |
     Get Stripe payment method
   tags:
     - User
     - Subscription
+    - Get
   responses:
     200:
       description: Returns payment method
@@ -17,12 +19,14 @@ get:
       schema:
         $ref: '../definitions/error.yaml'
 put:
+  operationId: create_payment_method
   summary: Add payment method
   description: |
     Add Stripe payment method
   tags:
     - User
     - Subscription
+    - Create
   responses:
     201:
       description: Payment method created

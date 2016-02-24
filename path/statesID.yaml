@@ -1,4 +1,5 @@
 get:
+  operationId: get_state
   summary: Get state --NEEDS WORK--
   description: |
     Get state
@@ -26,6 +27,7 @@ get:
       schema:
         $ref: '../definitions/error.yaml'
 put:
+  operationId: set_state
   summary: Set state --NEEDS WORK--
   description: |
     Set state

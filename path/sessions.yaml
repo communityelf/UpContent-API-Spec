@@ -1,10 +1,12 @@
 post:
+  operationId: create_session
   summary: Create UpContent session
   description: |
     Create UpContent user session
   tags:
     - User
     - Session
+    - Create
   parameters:
     - name: data
       in: body

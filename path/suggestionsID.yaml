@@ -1,9 +1,11 @@
 get:
+  operationId: get_suggestions
   summary: Get suggestion
   description: |
     Retrieves specific suggestion using the suggestion ID provided
   tags:
     - Suggestions
+    - Get
   parameters:
     - name: suggestion_id
       in: path
@@ -20,11 +22,13 @@ get:
       schema:
         $ref: '../definitions/error.yaml'
 patch:
+  operationId: update_suggestion
   summary: Update suggestion
   description: |
     Updates specified suggestion using the suggestion ID provided
   tags:
     - Suggestions
+    - Edit
   parameters:
     - name: suggestion_id
       in: path
@@ -42,10 +46,12 @@ patch:
         $ref: '../definitions/error.yaml'
 put:
   summary: Update suggestion
+  operationId: update_suggestion
   description: |
     Updates specified suggestion using the suggestion ID provided
   tags:
     - Suggestions
+    - Edit
   parameters:
     - name: suggestion_id
       in: path
@@ -62,6 +68,7 @@ put:
       schema:
         $ref: '../definitions/error.yaml'
 delete:
+  operationId: delete_suggestion
   summary: Delete suggestion
   description: |
     Delete specified suggestion using the suggestion ID provided
