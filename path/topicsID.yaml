@@ -1,9 +1,11 @@
 patch:
+  operationId: update_topic
   summary: Update topic
   description: |
     Updates a specific topic using the topic ID provided
   tags:
     - Topics
+    - Edit
   parameters:
     - name: topic_id
       in: path
@@ -30,11 +32,13 @@ patch:
       schema:
         $ref: '../definitions/error.yaml'
 delete:
+  operationId: delete_topic
   summary: Delete topic
   description: |
     Deletes a specific topic using the topic ID provided
   tags:
     - Topics
+    - Delete
   parameters:
     - name: topic_id
       in: path
@@ -54,11 +58,13 @@ delete:
       schema:
         $ref: '../definitions/error.yaml'
 get:
+  operationId: get_topic
   summary: Get topic
   description: |
     Returns a specific topic using the topic ID provided
   tags:
     - Topics
+    - Get
   parameters:
     - name: topic_id
       in: path

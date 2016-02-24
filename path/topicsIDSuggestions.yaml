@@ -1,4 +1,5 @@
 get:
+  operationId: get_suggestions
   summary: Get suggestions
   description: |
     Returns a list of suggestions for a specfic topic

@@ -5,6 +5,7 @@ get:
     Retrieves a list of all of the authenticated user's topics
   tags:
     - Topics
+    - Get
   responses:
     200:
       description: Returns an array of topics
@@ -17,11 +18,13 @@ get:
       schema:
         $ref: '../definitions/error.yaml'
 post:
+  operationId: create_topic
   summary: Create topic
   description: |
     Creates a new topic for the authenticated user
   tags:
     - Topics
+    - Create
   responses:
     200:
       description: Created topic succesfully
@@ -30,6 +33,7 @@ post:
         properties:
           topic:
             type: string
+            format: uuid
             description: A unique identifier for the topic
     default:
       description: Unexpected error
