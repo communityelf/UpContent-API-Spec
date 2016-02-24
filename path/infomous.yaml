@@ -1,9 +1,12 @@
 get:
-  summary: Get influence graph
+  operationId: get_infomous
+  summary: Get infomous
   description: |
-    Get influence graph
+    Get infomous graph data
   tags:
     - Suggestions
+    - Get
+    - Infomous
   parameters:
     - name: data
       in: body
