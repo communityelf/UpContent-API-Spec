@@ -26,6 +26,16 @@ put:
   tags:
     - Active Topics
     - Edit
+  parameters:
+    - name: data
+      in: body
+      required: true
+      schema:
+        description: Array of topic ids to activate
+        type: array
+        items:
+          type: string
+          format: uuid
   responses:
     200:
       description: Topics set to active
