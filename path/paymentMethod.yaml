@@ -1,12 +1,9 @@
 get:
   operationId: get_payment_method
   summary: Get payment method
-  description: |
-    Get Stripe payment method
+  description: Get Stripe payment method
   tags:
-    - User
-    - Subscription
-    - Get
+    - Payment Method
   responses:
     200:
       description: Returns payment method
@@ -24,9 +21,7 @@ put:
   description: |
     Add Stripe payment method
   tags:
-    - User
-    - Subscription
-    - Create
+    - Payment Method
   responses:
     201:
       description: Payment method created

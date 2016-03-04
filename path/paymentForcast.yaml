@@ -1,12 +1,9 @@
 get:
   operationId: get_payment_forcast
   summary: Get payment forcast
-  description: |
-    Get Stripe payment forcast
+  description: Get Stripe payment forcast
   tags:
-    - User
-    - Subscription
-    - Get
+    - Payment Forecast
   responses:
     200:
       description: Payment forcast found

@@ -1,11 +1,9 @@
 get:
   operationId: get_active_topics
   summary: Get active topics
-  description: |
-    Returns active topics
+  description: Returns active topics
   tags:
-    - Active Topics
-    - Get
+    - ActiveTopics
   responses:
     200:
       description: Returns all active topics
@@ -25,7 +23,6 @@ put:
   description: Set topic(s) to active
   tags:
     - Active Topics
-    - Edit
   parameters:
     - name: data
       in: body

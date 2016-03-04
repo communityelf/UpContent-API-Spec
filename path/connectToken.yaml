@@ -1,11 +1,9 @@
 post:
   operationId: create_connect_token
   summary: Create connect token --NEEDS WORK--
-  description: |
-    Create connect token
+  description: Create connect token
   tags:
-    - User
-    - Create
+    - Connect Token
   parameters:
     - name: data
       in: body

@@ -1,12 +1,9 @@
 get:
   operationId: get_payment_history
   summary: Get payment history
-  description: |
-    Get Stipe payment history
+  description: Get Stipe payment history
   tags:
-    - User
-    - Subscription
-    - Get
+    - Payment History
   responses:
     200:
       description: Payment history found

@@ -1,11 +1,9 @@
 post:
   operationId: create_merge_token
   summary: Create merge token --NEEDS WORK--
-  description: |
-    Create merge token
+  description: Create merge token
   tags:
-    - User
-    - Create
+    - Merge Token
   responses:
     200:
       description: User succesfully created

@@ -1,11 +1,9 @@
 post:
   operationId: create_connection
   summary: Connect to Upcontent --NEEDS WORK--
-  description: |
-    Creates a user session to upcontent
+  description: Creates a user session to upcontent
   tags:
-    - User
-    - Create
+    - Connection
   responses:
     201:
       description: User connected

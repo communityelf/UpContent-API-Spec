@@ -3,8 +3,7 @@ put:
   summary: Confirm email
   description: Confirms email
   tags:
-    - User
-    - Create
+    - Email
   parameters:
     - name: email_token
       in: path

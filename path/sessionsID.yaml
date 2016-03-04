@@ -1,12 +1,9 @@
 get:
   operationId: get_session
   summary: Get UpContent session
-  description: |
-    Get UpContent user session
+  description: Get UpContent user session
   tags:
-    - User
     - Session
-    - Get
   parameters:
     - name: session_id
       in: path
@@ -35,9 +32,7 @@ delete:
   description: |
     End UpContent user session
   tags:
-    - User
     - Session
-    - Delete
   parameters:
     - name: session_id
       in: path

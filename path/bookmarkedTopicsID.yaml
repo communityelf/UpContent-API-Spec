@@ -3,8 +3,7 @@ put:
   summary: Bookmark topic
   description: Bookmark topic
   tags:
-    - Topics
-    - Create
+    - Topics Bookmarks
   parameters:
     - name: topic_id
       in: path
@@ -40,6 +39,8 @@ delete:
   operationId: delete_bookmark
   summary: Delete bookmark
   description: Removes a bookmarked topic from users topics
+  tags:
+    - Topics Bookmarks
   parameters:
     - name: topic_id
       in: path

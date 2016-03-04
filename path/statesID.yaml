@@ -1,10 +1,9 @@
 get:
   operationId: get_state
   summary: Get state --NEEDS WORK--
-  description: |
-    Get state
+  description: Get state
   tags:
-    - User
+    - State
   parameters:
     - name: p_id
       in: path
@@ -32,7 +31,7 @@ put:
   description: |
     Set state
   tags:
-    - User
+    - State
   parameters:
     - name: p_id
       in: path

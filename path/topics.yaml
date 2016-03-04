@@ -1,11 +1,9 @@
 get:
   operationId: get_all_topics
   summary: List Topics
-  description: |
-    Retrieves a list of all of the authenticated user's topics
+  description: Retrieves a list of all of the authenticated user's topics
   tags:
     - Topics
-    - Get
   responses:
     200:
       description: Returns an array of topics
@@ -24,7 +22,6 @@ post:
     Creates a new topic for the authenticated user
   tags:
     - Topics
-    - Create
   responses:
     200:
       description: Created topic succesfully

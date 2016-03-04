@@ -88,7 +88,8 @@ paths:
     $ref: './path/bookmarkedTopicsID.yaml'
 
   /users:
-    $ref: './path/users.yaml'
+    post:
+      $ref: './path/users.yaml#/post'
 
   /users/{user_id}:
     $ref: './path/usersID.yaml'
@@ -103,7 +104,10 @@ paths:
     $ref: './path/changePassword.yaml'
 
   /me:
-    $ref: './path/me.yaml'
+    get:
+      $ref: './path/me.yaml#/get'
+    put:
+      $ref: './path/me.yaml#/put'
 
   /upcontent.users/{user_id}:
     $ref: './path/upcontentUsers.yaml'
@@ -112,4 +116,4 @@ paths:
     $ref: './path/connections.yaml'
 
   /user_count:
-    $ref: './path/userCount.yaml'
+    $ref: 'path/userCount.yaml'

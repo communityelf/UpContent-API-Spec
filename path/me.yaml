@@ -1,11 +1,9 @@
 get:
   operationId: get_user_profile
   summary: Get user profile
-  description: |
-    Returns basic user information
+  description: Returns basic user information
   tags:
-    - User
-    - Get
+    - Me
   responses:
     200:
       description: User found
@@ -13,7 +11,7 @@ get:
         type: object
         properties:
           user:
-            $ref: '../definitions/user.yaml'
+            $ref: '#/definitions/user'
     default:
       description: Unexpected error
       schema:
@@ -25,10 +23,9 @@ put:
   description: |
     Updates basic user information
   tags:
-    - User
-    - Edit
+    - Me
   parameters:
-    - name: data
+    - name: User
       in: body
       required: true
       schema:
@@ -90,3 +87,6 @@ put:
       description: Unexpected error
       schema:
         $ref: '../definitions/error.yaml'
+definitions:
+  user:
+    $ref: '../definitions/user.yaml'

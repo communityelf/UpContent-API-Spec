@@ -1,12 +1,9 @@
 post:
   operationId: create_hootsuite_session
   summary: Create hootsuite session
-  description: |
-    Create hootsuite session
+  description: Create hootsuite session
   tags:
-    - User
-    - Create
-    - Hootsuite
+    - Hootsuite Session
   parameters:
     - name: data
       in: body

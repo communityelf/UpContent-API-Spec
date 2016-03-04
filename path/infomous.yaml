@@ -1,12 +1,9 @@
 get:
   operationId: get_infomous
   summary: Get infomous
-  description: |
-    Get infomous graph data
+  description: Get infomous graph data
   tags:
-    - Suggestions
-    - Get
-    - Infomous
+    - Infomous Graph
   parameters:
     - name: data
       in: body

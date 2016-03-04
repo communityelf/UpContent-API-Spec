@@ -1,11 +1,8 @@
 get:
   operationId: get_suggestions
   summary: Get suggestions
-  description: |
-    Returns a list of suggestions for a specfic topic
-    using the topic ID provided
+  description: Returns a list of suggestions for a specfic topic using the topic ID provided
   tags:
-    - Topics
     - Suggestions
   parameters:
     - name: topic_id

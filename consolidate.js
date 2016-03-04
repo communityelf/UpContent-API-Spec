@@ -1,16 +1,8 @@
-var resolve = require('json-refs').resolveRefs;
-var YAML = require('yaml-js');
-var fs = require('fs');
+var SwaggerParser = require('swagger-parser');
+var process = require('process');
 
-var root = YAML.load(fs.readFileSync('index.yaml').toString());
-var options = {
-  filter        : ['relative', 'remote'],
-  loaderOptions : {
-    processContent : function (res, callback) {
-      callback(null, YAML.load(res.text));
-    }
-  }
-};
-resolve(root, options).then(function (results) {
-  console.log(JSON.stringify(results.resolved, null, 2));
+SwaggerParser.bundle('index.yaml').then(function(api) {
+  process.stdout.write(JSON.stringify(api));
+}).catch(function(err) {
+  console.log(err);
 });

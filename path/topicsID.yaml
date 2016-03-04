@@ -1,11 +1,9 @@
 patch:
   operationId: update_topic
   summary: Update topic
-  description: |
-    Updates a specific topic using the topic ID provided
+  description: Updates a specific topic using the topic ID provided
   tags:
-    - Topics
-    - Edit
+    - Topic
   parameters:
     - name: topic_id
       in: path
@@ -37,8 +35,7 @@ delete:
   description: |
     Deletes a specific topic using the topic ID provided
   tags:
-    - Topics
-    - Delete
+    - Topic
   parameters:
     - name: topic_id
       in: path
@@ -63,8 +60,7 @@ get:
   description: |
     Returns a specific topic using the topic ID provided
   tags:
-    - Topics
-    - Get
+    - Topic
   parameters:
     - name: topic_id
       in: path

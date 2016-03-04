@@ -1,11 +1,9 @@
 put:
   operationId: create_subscription
   summary: Create Stripe subscription
-  description: |
-    Create Stripe subscription --NEEDS WORK--
+  description: Create Stripe subscription --NEEDS WORK--
   tags:
-    - User
-    - Create
+    - Subscription
   parameters:
     - name: data
       in: body
@@ -37,8 +35,7 @@ delete:
   description: |
     Delete Stripe subscription, if one exists
   tags:
-    - User
-    - Delete
+    - Subscription
   responses:
     200:
       description: Subscription deleted
@@ -52,8 +49,7 @@ get:
   description: |
     Get Stripe subscription length and package
   tags:
-    - User
-    - Get
+    - Subscription
   responses:
     200:
       description: Stripe subscription info

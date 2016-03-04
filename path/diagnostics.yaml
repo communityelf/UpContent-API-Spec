@@ -1,8 +1,7 @@
 get:
   operationId: get_api_status
   summary: Get status of api
-  description: |
-    Check to see if api is running
+  description: Check to see if api is running
   tags:
     - Diagnostics
   responses:

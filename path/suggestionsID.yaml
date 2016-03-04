@@ -1,11 +1,9 @@
 get:
   operationId: get_suggestion
   summary: Get suggestion
-  description: |
-    Retrieves specific suggestion using the suggestion ID provided
+  description: Retrieves specific suggestion using the suggestion ID provided
   tags:
-    - Suggestions
-    - Get
+    - Suggestion
   parameters:
     - name: suggestion_id
       in: path
@@ -27,8 +25,7 @@ patch:
   description: |
     Updates specified suggestion using the suggestion ID provided
   tags:
-    - Suggestions
-    - Edit
+    - Suggestion
   parameters:
     - name: suggestion_id
       in: path
@@ -50,7 +47,7 @@ delete:
   description: |
     Delete specified suggestion using the suggestion ID provided
   tags:
-    - Suggestions
+    - Suggestion
   parameters:
     - name: suggestion_id
       in: path

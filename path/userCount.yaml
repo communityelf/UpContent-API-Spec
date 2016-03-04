@@ -1,11 +1,9 @@
 get:
   operationId: get_user_count
   summary: Number of UpContent users
-  description: |
-    Get number of UpContent users
+  description: Get number of UpContent users
   tags:
-    - User
-    - Diagnostics
+    - User Count
   responses:
     200:
       description: User connected
