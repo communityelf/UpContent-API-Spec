@@ -11,7 +11,7 @@ get:
         type: object
         properties:
           user:
-            $ref: '#/definitions/user'
+            $ref: '../definitions/user.yaml'
     default:
       description: Unexpected error
       schema:
@@ -87,6 +87,3 @@ put:
       description: Unexpected error
       schema:
         $ref: '../definitions/error.yaml'
-definitions:
-  user:
-    $ref: '../definitions/user.yaml'

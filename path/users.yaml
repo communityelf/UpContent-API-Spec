@@ -44,8 +44,4 @@ post:
             type: string
             format: email
     default:
-      $ref: '#/definitions/error'
-definitions:
-  error:
-    $ref: '../definitions/error.yaml'
-
+      $ref: '../definitions/error.yaml'

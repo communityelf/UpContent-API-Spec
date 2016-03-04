@@ -19,10 +19,11 @@ get:
       schema:
         $ref: '../definitions/error.yaml'
 put:
+  operationId: put_active_topics
   summary: Set active topics
   description: Set topic(s) to active
   tags:
-    - Active Topics
+    - ActiveTopics
   parameters:
     - name: data
       in: body

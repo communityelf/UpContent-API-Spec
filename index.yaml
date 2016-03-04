@@ -88,8 +88,7 @@ paths:
     $ref: './path/bookmarkedTopicsID.yaml'
 
   /users:
-    post:
-      $ref: './path/users.yaml#/post'
+    $ref: './path/users.yaml'
 
   /users/{user_id}:
     $ref: './path/usersID.yaml'
@@ -104,10 +103,7 @@ paths:
     $ref: './path/changePassword.yaml'
 
   /me:
-    get:
-      $ref: './path/me.yaml#/get'
-    put:
-      $ref: './path/me.yaml#/put'
+    $ref: './path/me.yaml'
 
   /upcontent.users/{user_id}:
     $ref: './path/upcontentUsers.yaml'

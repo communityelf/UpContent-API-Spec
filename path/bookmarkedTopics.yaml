@@ -1,4 +1,5 @@
 get:
+  operationId: get_bookmarked_topics
   summary: Bookmarked topics
   description: Gets a list of bookmarked topics
   tags:
