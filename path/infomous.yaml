@@ -36,5 +36,5 @@ get:
       description: Unexpected error
     504:
       description: Infomous timed out
-#    default:
-#      $ref: '../definitions/error.yaml'
+    default:
+      $ref: './../definitions/error.yaml'
