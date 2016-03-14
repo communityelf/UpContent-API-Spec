@@ -24,92 +24,92 @@ paths:
   /infomous-graph:
     $ref: './path/infomous.yaml'
 
-  /diagnostics/heartbeat:
-    $ref: './path/diagnostics.yaml'
-
-  /payment-forcast:
-    $ref: './path/paymentForcast.yaml'
-
-  /payment-history:
-    $ref: './path/paymentHistory.yaml'
-
-  /payment-method:
-    $ref: './path/paymentMethod.yaml'
-
-  /hootsuite.sessions:
-    $ref: './path/hootsuiteSession.yaml'
-
-  /sessions:
-    $ref: './path/sessions.yaml'
-
-  /sessions/{session_id}:
-    $ref: './path/sessionsID.yaml'
-
-  /states/{p_id}:
-    $ref: './path/statesID.yaml'
-
-  /subscription:
-    $ref: './path/subscription.yaml'
-
-  /suggestions/{suggestion_id}:
-    $ref: './path/suggestionsID.yaml'
-
-  /influence-graph/{topic_id}:
-    $ref: './path/influenceID.yaml'
-
-  /reset-token:
-    $ref: './path/resetToken.yaml'
-
-  /connect-token:
-    $ref: './path/connectToken.yaml'
-
-  /merge-token:
-    $ref: './path/mergeToken.yaml'
-
-  /topics:
-    $ref: './path/topics.yaml'
-
-  /topics/{topic_id}:
-    $ref: './path/topicsID.yaml'
-
-  /topics/{topic_id}/Suggestions:
-    $ref: './path/topicsIDSuggestions.yaml'
-
-  /active-topics:
-    $ref: './path/activeTopics.yaml'
-
-  /topic-count:
-    $ref: './path/topicCount.yaml'
-
-  /bookmarked-topics:
-    $ref: './path/bookmarkedTopics.yaml'
-
-  /bookmarked-topics/{topic_id}:
-    $ref: './path/bookmarkedTopicsID.yaml'
-
-  /users:
-    $ref: './path/users.yaml'
-
-  /users/{user_id}:
-    $ref: './path/usersID.yaml'
-
-  /confirmation/{email_token}:
-    $ref: './path/confirmation.yaml'
-
-  /password:
-    $ref: './path/resetPassword.yaml'
-
-  /change-password:
-    $ref: './path/changePassword.yaml'
-
-  /me:
-    $ref: './path/me.yaml'
-
-  /upcontent.users/{user_id}:
-    $ref: './path/upcontentUsers.yaml'
-
-  /connections:
-    $ref: './path/connections.yaml'
-
-  /user_count:
-    $ref: 'path/userCount.yaml'
+  #  /diagnostics/heartbeat:
+  #    $ref: './path/diagnostics.yaml'
+  # 
+  #  /payment-forcast:
+  #    $ref: './path/paymentForcast.yaml'
+  # 
+  #  /payment-history:
+  #    $ref: './path/paymentHistory.yaml'
+  # 
+  #  /payment-method:
+  #    $ref: './path/paymentMethod.yaml'
+  # 
+  #  /hootsuite.sessions:
+  #    $ref: './path/hootsuiteSession.yaml'
+  # 
+  #  /sessions:
+  #    $ref: './path/sessions.yaml'
+  # 
+  #  /sessions/{session_id}:
+  #    $ref: './path/sessionsID.yaml'
+  # 
+  #  /states/{p_id}:
+  #    $ref: './path/statesID.yaml'
+  # 
+  #  /subscription:
+  #    $ref: './path/subscription.yaml'
+  # 
+  #  /suggestions/{suggestion_id}:
+  #    $ref: './path/suggestionsID.yaml'
+  # 
+  #  /influence-graph/{topic_id}:
+  #    $ref: './path/influenceID.yaml'
+  # 
+  #  /reset-token:
+  #    $ref: './path/resetToken.yaml'
+  # 
+  #  /connect-token:
+  #    $ref: './path/connectToken.yaml'
+  # 
+  #  /merge-token:
+  #    $ref: './path/mergeToken.yaml'
+  # 
+  #  /topics:
+  #    $ref: './path/topics.yaml'
+  # 
+  #  /topics/{topic_id}:
+  #    $ref: './path/topicsID.yaml'
+  # 
+  #  /topics/{topic_id}/Suggestions:
+  #    $ref: './path/topicsIDSuggestions.yaml'
+  # 
+  #  /active-topics:
+  #    $ref: './path/activeTopics.yaml'
+  # 
+  #  /topic-count:
+  #    $ref: './path/topicCount.yaml'
+  # 
+  #  /bookmarked-topics:
+  #    $ref: './path/bookmarkedTopics.yaml'
+  # 
+  #  /bookmarked-topics/{topic_id}:
+  #    $ref: './path/bookmarkedTopicsID.yaml'
+  # 
+  #  /users:
+  #    $ref: './path/users.yaml'
+  # 
+  #  /users/{user_id}:
+  #    $ref: './path/usersID.yaml'
+  # 
+  #  /confirmation/{email_token}:
+  #    $ref: './path/confirmation.yaml'
+  # 
+  #  /password:
+  #    $ref: './path/resetPassword.yaml'
+  # 
+  #  /change-password:
+  #    $ref: './path/changePassword.yaml'
+  # 
+  #  /me:
+  #    $ref: './path/me.yaml'
+  # 
+  #  /upcontent.users/{user_id}:
+  #    $ref: './path/upcontentUsers.yaml'
+  # 
+  #  /connections:
+  #    $ref: './path/connections.yaml'
+  # 
+  #  /user_count:
+  #    $ref: 'path/userCount.yaml'
