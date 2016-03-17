@@ -8,7 +8,7 @@ get:
     200:
       description: Payment history found
       schema:
-        $ref: '../definitions/history.yaml'
+        $ref: 'definitions/history.yaml'
     500:
       description: User does not have payment history
       schema:
@@ -19,4 +19,4 @@ get:
     default:
       description: Unexpected error
       schema:
-        $ref: '../definitions/error.yaml'
+        $ref: 'definitions/error.yaml'

@@ -13,11 +13,11 @@ get:
           topics:
             type: array
             items:
-              $ref: '../definitions/topic.yaml'
+              $ref: 'definitions/topic.yaml'
     default:
       description: Unexpected error
       schema:
-        $ref: '../definitions/error.yaml'
+        $ref: 'definitions/error.yaml'
 put:
   operationId: put_active_topics
   summary: Set active topics
@@ -44,4 +44,4 @@ put:
     default:
       description: Unexpected error
       schema:
-        $ref: '../definitions/error.yaml'
+        $ref: 'definitions/error.yaml'

@@ -10,11 +10,11 @@ get:
       schema:
         type: array
         items:
-          $ref: '../definitions/topic.yaml'
+          $ref: 'definitions/topic.yaml'
     default:
       description: Unexpected error
       schema:
-        $ref: '../definitions/error.yaml'
+        $ref: 'definitions/error.yaml'
 post:
   operationId: create_topic
   summary: Create topic
@@ -35,4 +35,4 @@ post:
     default:
       description: Unexpected error
       schema:
-        $ref: '../definitions/error.yaml'
+        $ref: 'definitions/error.yaml'

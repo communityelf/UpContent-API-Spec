@@ -34,7 +34,7 @@ put:
     default:
       description: Unexpected error
       schema:
-        $ref: '../definitions/error.yaml'
+        $ref: 'definitions/error.yaml'
 delete:
   operationId: delete_bookmark
   summary: Delete bookmark
@@ -54,4 +54,4 @@ delete:
     default:
       description: Unexpected error
       schema:
-        $ref: '../definitions/error.yaml'
+        $ref: 'definitions/error.yaml'

@@ -8,13 +8,13 @@ get:
     200:
       description: Returns payment method
       schema:
-        $ref: '../definitions/payment.yaml'
+        $ref: 'definitions/payment.yaml'
     404:
       description: User does not have a subscription
     default:
       description: Unexpected error
       schema:
-        $ref: '../definitions/error.yaml'
+        $ref: 'definitions/error.yaml'
 put:
   operationId: create_payment_method
   summary: Add payment method
@@ -41,4 +41,4 @@ put:
     default:
       description: Unexpected error
       schema:
-        $ref: '../definitions/error.yaml'
+        $ref: 'definitions/error.yaml'

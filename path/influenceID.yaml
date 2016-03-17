@@ -58,4 +58,4 @@ get:
     default:
       description: Unexpected error.
       schema:
-        $ref: '../definitions/error.yaml'
+        $ref: 'definitions/error.yaml'

@@ -28,7 +28,7 @@ patch:
     default:
       description: Unexpected error
       schema:
-        $ref: '../definitions/error.yaml'
+        $ref: 'definitions/error.yaml'
 delete:
   operationId: delete_topic
   summary: Delete topic
@@ -53,7 +53,7 @@ delete:
     default:
       description: Unexpected error
       schema:
-        $ref: '../definitions/error.yaml'
+        $ref: 'definitions/error.yaml'
 get:
   operationId: get_topic
   summary: Get topic
@@ -72,7 +72,7 @@ get:
     200:
       description: Topic found
       schema:
-        $ref: '../definitions/topic.yaml'
+        $ref: 'definitions/topic.yaml'
     400:
       description: Improperly formatted request
     404:
@@ -80,4 +80,4 @@ get:
     default:
       description: Unexpected error
       schema:
-        $ref: '../definitions/error.yaml'
+        $ref: 'definitions/error.yaml'

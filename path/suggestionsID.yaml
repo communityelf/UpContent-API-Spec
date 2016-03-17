@@ -14,11 +14,11 @@ get:
     200:
       description: Suggestion found
       schema:
-        $ref: '../definitions/suggestion.yaml'
+        $ref: 'definitions/suggestion.yaml'
     default:
       description: Unexpected error
       schema:
-        $ref: '../definitions/error.yaml'
+        $ref: 'definitions/error.yaml'
 patch:
   operationId: update_suggestion
   summary: Update suggestion
@@ -40,7 +40,7 @@ patch:
     default:
       description: Unexpected error
       schema:
-        $ref: '../definitions/error.yaml'
+        $ref: 'definitions/error.yaml'
 delete:
   operationId: delete_suggestion
   summary: Delete suggestion
@@ -62,4 +62,4 @@ delete:
     default:
       description: Unexpected error
       schema:
-        $ref: '../definitions/error.yaml'
+        $ref: 'definitions/error.yaml'

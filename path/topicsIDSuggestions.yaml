@@ -20,7 +20,7 @@ get:
           suggestions:
             type: array
             items:
-              $ref: '../definitions/suggestion.yaml'
+              $ref: 'definitions/suggestion.yaml'
     400:
       description: Improperly formatted request
     404:
@@ -28,4 +28,4 @@ get:
     default:
       description: Unexpected error
       schema:
-        $ref: '../definitions/error.yaml'
+        $ref: 'definitions/error.yaml'

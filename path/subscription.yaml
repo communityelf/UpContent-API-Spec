@@ -28,7 +28,7 @@ put:
     default:
       description: Unexpected error
       schema:
-        $ref: '../definitions/error.yaml'
+        $ref: 'definitions/error.yaml'
 delete:
   operationId: delete_subscription
   summary: Delete Stripe subscription
@@ -42,7 +42,7 @@ delete:
     default:
       description: Unexpected error
       schema:
-        $ref: '../definitions/error.yaml'
+        $ref: 'definitions/error.yaml'
 get:
   operationId: get_subscription
   summary: Get Stripe subscription
@@ -63,4 +63,4 @@ get:
     default:
       description: Unexpected error
       schema:
-        $ref: '../definitions/error.yaml'
+        $ref: 'definitions/error.yaml'

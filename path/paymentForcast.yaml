@@ -8,7 +8,7 @@ get:
     200:
       description: Payment forcast found
       schema:
-        $ref: '../definitions/forcast.yaml'
+        $ref: 'definitions/forcast.yaml'
     500:
       description: Unable to retrieve payment forcast
       schema:
@@ -19,4 +19,4 @@ get:
     default:
       description: Unexpected error
       schema:
-        $ref: '../definitions/error.yaml'
+        $ref: 'definitions/error.yaml'

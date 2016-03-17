@@ -24,7 +24,7 @@ get:
     default:
       description: Unexpected error.
       schema:
-        $ref: '../definitions/error.yaml'
+        $ref: 'definitions/error.yaml'
 put:
   operationId: set_state
   summary: Set state --NEEDS WORK--
@@ -58,4 +58,4 @@ put:
     default:
       description: Unexpected error.
       schema:
-        $ref: '../definitions/error.yaml'
+        $ref: 'definitions/error.yaml'
