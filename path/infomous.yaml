@@ -5,36 +5,36 @@ get:
   tags:
     - Infomous Graph
   parameters:
-    - name: data
-      in: body
+    - name: feed_url
+      in: query
+      type: string
+      description: The feed URL to get an Infomous graph for.
       required: true
-      schema:
-        type: object
-        properties:
-          feed_url:
-            type: string
-            description: --Needs work--
   responses:
     200:
       description: Infomous graph found
       schema:
-        type: object
-        properties:
-          words:
-            type: array
-            items:
-              type: string
-              description: --Needs work--
-          sources:
-            type: object
-            additionalProperties:
-              type: array
-              items:
-                type: string
-                description: Words associated with the URL.
+        $ref: '#/definitions/InfomousGraph'
     502:
       description: Unexpected error
     504:
       description: Infomous timed out
     default:
       $ref: 'definitions/error.yaml'
+definitions:
+  InfomousGraph:
+    title: Infomous Graph
+    type: object
+    properties:
+      words:
+        type: array
+        items:
+          type: string
+          description: --Needs work--
+      sources:
+        type: object
+        additionalProperties:
+          type: array
+          items:
+            type: string
+            description: Words associated with the URL.
