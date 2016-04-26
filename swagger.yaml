@@ -1,0 +1,842 @@
+swagger: "2.0"
+host: api.upcontent.com
+schemes:
+  - https
+produces:
+  - application/json
+info:
+  title: UpContent Platform API
+  description: UpContent content discovery platform API.
+  version: 2.0.0
+paths:
+  # ACTIVE TOPICS
+  /active-topics:
+    get:
+      operationId: ListActiveTopics
+      summary: List the current user's active topics.
+      tags:
+        - Topics
+      responses:
+        200:
+          description: OK
+          schema:
+            type: object
+            properties:
+              topics:
+                type: array
+                items:
+                  $ref: "#/definitions/TopicResponse"
+        403:
+          $ref: '#/responses/Forbidden'
+        500:
+          $ref: '#/responses/ServerError'
+        default:
+          $ref: '#/responses/Default'
+
+
+  /active-topics/{topic_id}:
+    put:
+      operationId: ActivateTopic
+      summary: Activate a topic.
+      tags:
+        - Topics
+      responses:
+        204:
+          description: OK
+        400:
+          $ref: '#/responses/BadRequest'
+        403:
+          $ref: '#/responses/Forbidden'
+        404:
+          $ref: '#/responses/NotFound'
+        500:
+          $ref: '#/responses/ServerError'
+        default:
+          $ref: '#/responses/Default'
+    delete:
+      operationId: DeactivateTopic
+      summary: Deactivate a topic.
+      tags:
+        - Topics
+      responses:
+        204:
+          description: OK
+        400:
+          $ref: '#/responses/BadRequest'
+        403:
+          $ref: '#/responses/Forbidden'
+        404:
+          $ref: '#/responses/NotFound'
+        500:
+          $ref: '#/responses/ServerError'
+        default:
+          $ref: '#/responses/Default'
+    parameters:
+      -
+        name: topic_id
+        in: path
+        required: true
+        type: string
+        format: uuid
+
+  # BOOKMARKED TOPICS
+  /bookmarked-topics:
+    get:
+      operationId: DeactivateTopic
+      summary: List the current user's bookmarked topics.
+      tags:
+        - Topics
+      responses:
+        200:
+          description: OK
+          schema:
+            type: object
+            properties:
+              topics:
+                type: array
+                items:
+                  $ref: "#/definitions/TopicResponse"
+        403:
+          $ref: '#/responses/Forbidden'
+        500:
+          $ref: '#/responses/ServerError'
+        default:
+          $ref: '#/responses/Default'
+  /bookmarked-topics/{topic_id}:
+    put:
+      operationId: BookmarkTopic
+      summary: Bookmark a topic for the current user.
+      tags:
+        - Topics
+      responses:
+        204:
+          description: OK
+        400:
+          $ref: '#/responses/BadRequest'
+        403:
+          $ref: '#/responses/Forbidden'
+        404:
+          $ref: '#/responses/NotFound'
+        500:
+          $ref: '#/responses/ServerError'
+        default:
+          $ref: '#/responses/Default'
+    delete:
+      operationId: UnbookmarkTopic
+      summary: Removed a topic bookmark for the current user.
+      tags:
+        - Topics
+      responses:
+        204:
+          description: OK
+        400:
+          $ref: '#/responses/BadRequest'
+        403:
+          $ref: '#/responses/Forbidden'
+        404:
+          $ref: '#/responses/NotFound'
+        500:
+          $ref: '#/responses/ServerError'
+        default:
+          $ref: '#/responses/Default'
+    parameters:
+      -
+        name: topic_id
+        in: path
+        required: true
+        type: string
+        format: uuid
+
+  # TOPICS
+  /topics:
+    get:
+      operationId: ListTopics
+      summary: List the current user's topics.
+      tags:
+        - Topics
+      responses:
+        200:
+          description: OK
+          schema:
+            type: object
+            properties:
+              topics:
+                type: array
+                items:
+                  $ref: "#/definitions/TopicResponse"
+        403:
+          $ref: '#/responses/Forbidden'
+        500:
+          $ref: '#/responses/ServerError'
+        default:
+          $ref: '#/responses/Default'
+    post:
+      operationId: CreateTopic
+      summary: Create a topic for the current user.
+      tags:
+        - Topics
+      parameters:
+        -
+          name: Topic
+          in: body
+          required: true
+          schema:
+            $ref: '#/definitions/TopicParameter'
+      responses:
+        200:
+          description: OK
+        400:
+          $ref: '#/responses/BadRequest'
+        403:
+          $ref: '#/responses/Forbidden'
+        500:
+          $ref: '#/responses/ServerError'
+        default:
+          $ref: '#/responses/Default'
+  /topics/{topic_id}:
+    get:
+      operationId: GetTopic
+      summary: Retrieve a topic.
+      tags:
+        - Topics
+      responses:
+        200:
+          description: OK
+          schema:
+            $ref: '#/definitions/TopicResponse'
+        400:
+          $ref: '#/responses/BadRequest'
+        404:
+          $ref: '#/responses/NotFound'
+        500:
+          $ref: '#/responses/ServerError'
+        default:
+          $ref: '#/responses/Default'
+    put:
+      operationId: UpdateTopic
+      summary: Update a topic.
+      tags:
+        - Topics
+      parameters:
+        -
+          name: Topic
+          in: body
+          required: true
+          schema:
+            $ref: '#/definitions/TopicParameter'
+      responses:
+        200:
+          description: OK
+        400:
+          $ref: '#/responses/BadRequest'
+        403:
+          $ref: '#/responses/Forbidden'
+        404:
+          $ref: '#/responses/NotFound'
+        500:
+          $ref: '#/responses/ServerError'
+        default:
+          $ref: '#/responses/Default'
+    delete:
+      operationId: RemoveTopic
+      summary: Delete a topic.
+      tags:
+        - Topics
+      responses:
+        204:
+          description: OK
+        400:
+          $ref: '#/responses/BadRequest'
+        403:
+          $ref: '#/responses/Forbidden'
+        404:
+          $ref: '#/responses/NotFound'
+        500:
+          $ref: '#/responses/ServerError'
+        default:
+          $ref: '#/responses/Default'
+    parameters:
+      -
+        name: topic_id
+        in: path
+        required: true
+        type: string
+        format: uuid
+  /topic-count:
+    get:
+      operationId: GetTopicCount
+      summary: Retreive the number of active topics for the current user.
+      tags:
+        - Topics
+      responses:
+        200:
+          description: OK
+          schema:
+            type: integer
+        403:
+          $ref: '#/responses/Forbidden'
+        500:
+          $ref: '#/responses/ServerError'
+        default:
+          $ref: '#/responses/Default'
+
+  # SUGGESTIONS
+  /topics/{topic_id}/suggestions:
+    get:
+      operationId: ListSuggestions
+      summary: List the suggestions for a topic.
+      tags:
+        - Suggestions
+      parameters:
+        -
+          name: type
+          in: query
+          required: false
+          type: string
+        -
+          name: order
+          in: query
+          required: false
+          type: string
+        -
+          name: age
+          in: query
+          required: false
+          type: integer
+      responses:
+        200:
+          description: OK
+          schema:
+            type: object
+            properties:
+              suggestions:
+                type: array
+                items:
+                  $ref: '#/definitions/SuggestionResponse'
+        400:
+          $ref: '#/responses/BadRequest'
+        404:
+          $ref: '#/responses/NotFound'
+        500:
+          $ref: '#/responses/ServerError'
+        default:
+          $ref: '#/responses/Default'
+    parameters:
+      -
+        name: topic_id
+        in: path
+        required: true
+        type: string
+        format: uuid
+  /topics/{topic_id}/favorite-suggestions:
+    get:
+      operationId: GetFavoriteSuggestions
+      summary: List the favorited suggestions for a topic.
+      tags:
+        - Suggestions
+      responses:
+        200:
+          description: OK
+          schema:
+            type: object
+            properties:
+              suggestions:
+                type: array
+                items:
+                  $ref: '#/definitions/SuggestionResponse'
+        400:
+          $ref: '#/responses/BadRequest'
+        403:
+          $ref: '#/responses/Forbidden'
+        404:
+          $ref: '#/responses/NotFound'
+        500:
+          $ref: '#/responses/ServerError'
+        default:
+          $ref: '#/responses/Default'
+    parameters:
+      -
+        name: topic_id
+        in: path
+        required: true
+        type: string
+        format: uuid
+  /favorite-suggestions/{suggestion_id}:
+    delete:
+      operationId: UnfavoriteSuggestion
+      summary: Remove a favorite suggestion.
+      tags:
+        - Suggestions
+      responses:
+        204:
+          description: OK
+        400:
+          $ref: '#/responses/BadRequest'
+        403:
+          $ref: '#/responses/Forbidden'
+        404:
+          $ref: '#/responses/NotFound'
+        500:
+          $ref: '#/responses/ServerError'
+        default:
+          $ref: '#/responses/Default'
+    put:
+      operationId: FavoriteSuggestion
+      summary: Add a favorite suggestion.
+      tags:
+        - Suggestions
+      responses:
+        204:
+          description: OK
+        400:
+          $ref: '#/responses/BadRequest'
+        403:
+          $ref: '#/responses/Forbidden'
+        404:
+          $ref: '#/responses/NotFound'
+        500:
+          $ref: '#/responses/ServerError'
+        default:
+          $ref: '#/responses/Default'
+    parameters:
+      -
+        name: suggestion_id
+        in: path
+        required: true
+        type: string
+        format: uuid
+  /suggestions/{suggestion_id}:
+    get:
+      operationId: GetSuggestion
+      summary: Retrieve a suggestion.
+      tags:
+        - Suggestions
+      responses:
+        200:
+          description: OK
+          schema:
+            $ref: '#/definitions/SuggestionResponse'
+        400:
+          $ref: '#/responses/BadRequest'
+        404:
+          $ref: '#/responses/NotFound'
+        500:
+          $ref: '#/responses/ServerError'
+        default:
+          $ref: '#/responses/Default'
+    delete:
+      operationId: RemoveSuggestion
+      summary: Delete a suggestion.
+      tags:
+        - Suggestions
+      responses:
+        204:
+          description: OK
+        403:
+          $ref: '#/responses/Forbidden'
+        404:
+          $ref: '#/responses/NotFound'
+        default:
+          $ref: '#/responses/Default'
+    put:
+      operationId: UpdateSuggestion
+      summary: Update a suggestion.
+      tags:
+        - Suggestions
+      responses:
+        204:
+          description: OK
+        400:
+          $ref: '#/responses/BadRequest'
+        403:
+          $ref: '#/responses/Forbidden'
+        404:
+          $ref: '#/responses/NotFound'
+        default:
+          $ref: '#/responses/Default'
+    parameters:
+      -
+        name: suggestion_id
+        in: path
+        required: true
+        type: string
+        format: uuid
+
+  /topic/{topic_id}/infomous-graph:
+    get:
+      operationId: GetInfomousGraph
+      summary: Retrieve the infomous graph for a topic.
+      tags:
+        - Suggestions
+      responses:
+        200:
+          description: OK
+          schema:
+            $ref: '#/definitions/InfomousResponse'
+        400:
+          $ref: '#/responses/BadRequest'
+        404:
+          $ref: '#/responses/NotFound'
+        default:
+          $ref: '#/responses/Default'
+    parameters:
+      -
+        name: topic_id
+        in: path
+        required: true
+        type: string
+        format: uuid
+  /topics/{topic_id}/influence-graph:
+    get:
+      operationId: GetInfluenceGraph
+      summary: Retrieve the influence graph for a topic.
+      tags:
+        - Suggestions
+      responses:
+        200:
+          description: OK
+          schema:
+            $ref: '#/definitions/InfluenceResponse'
+        400:
+          $ref: '#/responses/BadRequest'
+        404:
+          $ref: '#/responses/NotFound'
+        default:
+          $ref: '#/responses/Default'
+    parameters:
+      -
+        name: topic_id
+        in: path
+        required: true
+        type: string
+        format: uuid
+
+  # PROFILE
+  /profile:
+    get:
+      operationId: GetProfile
+      summary: Retrieve the current user's profile.
+      tags:
+        - Profile
+      responses:
+        200:
+          description: OK
+          schema:
+            $ref: '#/definitions/ProfileResponse'
+        403:
+          $ref: '#/responses/Forbidden'
+        default:
+          $ref: '#/responses/Default'
+    put:
+      operationId: UpdateProfile
+      summary: Update the current user's profile.
+      tags:
+        - Profile
+      parameters:
+        - name: Profile
+          in: body
+          required: true
+          schema:
+            $ref: '#/definitions/ProfileParameter'
+      responses:
+        204:
+          description: OK
+        400:
+          $ref: '#/responses/BadRequest'
+        403:
+          $ref: '#/responses/Forbidden'
+        default:
+          $ref: '#/responses/Default'
+
+  # PAYMENT STUFF
+  /payment-history:
+    get:
+      operationId: GetPaymentHistory
+      summary: Retrieve the current user's payment history.
+      tags:
+        - Subscription
+      responses:
+        200:
+          description: OK
+          schema:
+            $ref: '#/definitions/PaymentHistoryResponse'
+        403:
+          $ref: '#/responses/Forbidden'
+        default:
+          $ref: '#/responses/Default'
+  /payment-forecast:
+    get:
+      operationId: GetPaymentForecast
+      summary: Retrieve the current user's payment forecast.
+      tags:
+        - Subscription
+      responses:
+        200:
+          description: OK
+          schema:
+            $ref: '#/definitions/PaymentForecastResponse'
+        403:
+          $ref: '#/responses/Forbidden'
+        default:
+          $ref: '#/responses/Default'
+  /subscription:
+    get:
+      operationId: GetSubscription
+      summary: Retrieve the current user's subscription.
+      tags:
+        - Subscription
+      responses:
+        200:
+          description: OK
+          schema:
+            $ref: '#/definitions/SubscriptionResponse'
+        403:
+          $ref: '#/responses/Forbidden'
+        default:
+          $ref: '#/responses/Default'
+
+# PARAMETER DEFINITIONS
+definitions:
+  TopicParameter:
+    type: object
+    properties:
+      name:
+        type: string
+      keywords:
+        type: array
+        items:
+          type: string
+
+  ProfileParameter:
+    type: object
+    properties:
+      name:
+        type: string
+      email:
+        type: string
+      handle:
+        type: string
+      company:
+        type: string
+      location:
+        type: string
+      industry:
+        type: string
+      website:
+        type: string
+
+  # RESPONSE DEFINITIONS
+  TopicResponse:
+    type: object
+    properties:
+      id:
+        type: string
+        format: uuid
+      author_username:
+        type: string
+      author_avatar:
+        type: string
+      name:
+        type: string
+      keywords:
+        type: array
+        items:
+          type: string
+      status:
+        type: integer
+      created:
+        type: string
+
+  SuggestionResponse:
+    type: object
+    properties:
+      id:
+        type: string
+        format: uuid
+      title:
+        type: string
+      found:
+        type: string
+        format: date-time
+      posted:
+        type: string
+        format: date-time
+      creator:
+        type: string
+      status:
+        type: string
+      text:
+        type: string
+      article_url:
+        type: string
+        format: url
+      image_url:
+        type: string
+        format: url
+      source_type:
+        type: string
+      category:
+        type: string
+
+  InfomousResponse:
+    type: object
+    properties:
+      words:
+        type: array
+        items:
+          type: string
+      sources:
+        type: object
+        additionalProperties:
+          type: array
+          items:
+            type: string
+
+  InfluenceResponse:
+    type: object
+    properties:
+      nodes:
+        type: array
+        items:
+          type: object
+          properties:
+            center:
+              type: number
+            group:
+              type: integer
+            name:
+              type: string
+            ref:
+              type: string
+              format: uuid
+            title:
+              type: string
+      links:
+        type: array
+        items:
+          type: object
+          properties:
+            source:
+              type: integer
+            target:
+              type: integer
+            value:
+              type: number
+
+  ProfileResponse:
+    type: object
+    properties:
+      id:
+        type: string
+        format: uuid
+      name:
+        type: string
+      email:
+        type: string
+      handle:
+        type: string
+      company:
+        type: string
+      location:
+        type: string
+      industry:
+        type: string
+      website:
+        type: string
+      created:
+        type: string
+        format: date-time
+
+  PaymentHistoryResponse:
+    type: object
+    properties:
+      total:
+        type: number
+      currency:
+        type: string
+      status:
+        type: string
+      reason:
+        type: string
+      receipt_number:
+        type: string
+      last4:
+        type: string
+      brand:
+        type: string
+      date:
+        type: string
+        format: date-time
+      period_start:
+        type: string
+        format: date-time
+      period_end:
+        type: string
+        format: date-time
+      items:
+        type: array
+        items:
+          type: object
+          properties:
+            plan_name:
+              type: string
+            proration:
+              type: number
+
+  PaymentForecastResponse:
+    type: object
+    properties:
+      previous:
+        type: object
+        properties:
+          total:
+            type: number
+          currency:
+            type: string
+          date:
+            type: string
+            format: date-time
+      upcoming:
+        type: object
+        properties:
+          total:
+            type: number
+          currency:
+            type: string
+          date:
+            type: string
+            format: date-time
+
+  SubscriptionResponse:
+    type: object
+    properties:
+      id:
+        type: string
+      package_key:
+        type: string
+      interval_key:
+        type: string
+      plan:
+        type: string
+      name:
+        type: string
+      count:
+        type: string
+      cancel_at_period_end:
+        type: boolean
+      current_period_end:
+        type: integer
+      amount:
+        type: integer
+
+responses:
+  Forbidden:
+    description: Forbidden
+  NotFound:
+    description: Not Found
+  BadRequest:
+    description: Bad Request
+  ServerError:
+    description: Server Error
+  Default:
+    description: Default Response
