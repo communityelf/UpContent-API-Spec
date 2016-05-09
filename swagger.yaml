@@ -92,7 +92,7 @@ paths:
   # BOOKMARKED TOPICS
   /bookmarked-topics:
     get:
-      operationId: DeactivateTopic
+      operationId: ListBookmarkedTopics
       summary: List the current user's bookmarked topics.
       tags:
         - Topics
