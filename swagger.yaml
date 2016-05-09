@@ -8,6 +8,16 @@ info:
   title: UpContent Platform API
   description: UpContent content discovery platform API.
   version: 2.0.0
+securityDefinitions:
+  api_oauth:
+    type: oauth2
+    authorization_url: "https://my.upcontent.com/auth"
+    flow: implicit
+    scopes:
+      client: Full UpContent client privileges (restricted)
+security:
+  api_oauth:
+    - client
 paths:
   # ACTIVE TOPICS
   /active-topics:
